@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Monitor</title>
+    <script src="/static/js/jquery-3.1.1.min.js"></script>
+    <script src="/static/js/Chart.js"></script>
+</head>
+<body>
+
+{#    <canvas id="can" height="400px" width="400px"></canvas>#}
+{#    <script>#}
+{#        $(#}
+{#            function () {#}
+{#                alert('Hello')#}
+{#                var can=$("#can").get(0).getContext("2d");#}
+{#                canData = {#}
+{#                    labels:["a","b","c","d","e"],#}
+{#                    datasets:[#}
+{#                        {#}
+{#                            fillColor:"rgba(0,255,0,0.2)",#}
+{#                            strockeColor:"rgba(0,255,0,1)",#}
+{#                            data:[#}
+{#                                1,2,3,2,5#}
+{#                            ]#}
+{#                        }#}
+{#                    ]#}
+{#                };#}
+{#                var line = new Chart(can).Line(canData)#}
+{#            }#}
+{#        )#}
+{#    </script>#}
+    <h3>总内存(M)</h3>
+    {{ mem_total | safe }}
+    <h3>可使用内存(M)</h3>
+    <canvas id="mem_available" height="200px" width="1200px"></canvas>
+    <script>
+        $(
+            function () {
+                var can=$("#mem_available").get(0).getContext("2d");
+                var labels = {{ mem_available_clocks | safe }};
+                var data = {{ mem_available_values | safe }};
+                canData = {
+                    labels: labels,
+                    datasets:[
+                        {
+                            fillColor:"rgba(0,255,0,0.2)",
+                            strockeColor:"rgba(0,255,0,1)",
+                            data: data,
+                        }
+                    ]
+                };
+                var line = new Chart(can).Line(canData)
+            }
+        )
+    </script>
+
+    <h3>最近1分钟CPU使用率</h3>
+    <canvas id="cpu_avg1" height="200px" width="1200px"></canvas>
+    <script>
+        $(
+            function () {
+                var can=$("#cpu_avg1").get(0).getContext("2d");
+                var labels = {{ cpu_avg1_clocks | safe }};
+                var data = {{ cpu_avg1_values | safe }};
+                canData = {
+                    labels: labels,
+                    datasets:[
+                        {
+                            fillColor:"rgba(0,255,0,0.2)",
+                            strockeColor:"rgba(0,255,0,1)",
+                            data: data,
+                        }
+                    ]
+                };
+                var line = new Chart(can).Line(canData)
+            }
+        )
+    </script>
+
+    <h3>最近5分钟CPU使用率</h3>
+    <canvas id="cpu_avg5" height="200px" width="1200px"></canvas>
+    <script>
+        $(
+            function () {
+                var can=$("#cpu_avg5").get(0).getContext("2d");
+                var labels = {{ cpu_avg5_clocks | safe }};
+                var data = {{ cpu_avg5_values | safe }};
+                canData = {
+                    labels: labels,
+                    datasets:[
+                        {
+                            fillColor:"rgba(0,255,0,0.2)",
+                            strockeColor:"rgba(0,255,0,1)",
+                            data: data,
+                        }
+                    ]
+                };
+                var line = new Chart(can).Line(canData)
+            }
+        )
+    </script>
+
+    <h3>最近15分钟CPU使用率</h3>
+    <canvas id="cpu_avg15" height="200px" width="1200px"></canvas>
+    <script>
+        $(
+            function () {
+                var can=$("#cpu_avg15").get(0).getContext("2d");
+                var labels = {{ cpu_avg15_clocks | safe }};
+                var data = {{ cpu_avg15_values | safe }};
+                canData = {
+                    labels: labels,
+                    datasets:[
+                        {
+                            fillColor:"rgba(0,255,0,0.2)",
+                            strockeColor:"rgba(0,255,0,1)",
+                            data: data ,
+                        }
+                    ]
+                };
+                var line = new Chart(can).Line(canData)
+            }
+        )
+    </script>
+
+    <h3>网络IN流量</h3>
+    <canvas id="net_in" height="200px" width="1200px"></canvas>
+    <script>
+        $(
+            function () {
+                var can=$("#net_in").get(0).getContext("2d");
+                var labels = {{ net_in_clocks | safe }};
+                var data = {{ net_in_values | safe }};
+                canData = {
+                    labels: labels,
+                    datasets:[
+                        {
+                            fillColor:"rgba(0,255,0,0.2)",
+                            strockeColor:"rgba(0,255,0,1)",
+                            data: data ,
+                        }
+                    ]
+                };
+                var line = new Chart(can).Line(canData)
+            }
+        )
+    </script>
+
+    <h3>网络OUT流量</h3>
+    <canvas id="net_out" height="200px" width="1200px"></canvas>
+    <script>
+        $(
+            function () {
+                var can=$("#net_out").get(0).getContext("2d");
+                var labels = {{ net_out_clocks | safe }};
+                var data = {{ net_out_values | safe }};
+                canData = {
+                    labels: labels,
+                    datasets:[
+                        {
+                            fillColor:"rgba(0,255,0,0.2)",
+                            strockeColor:"rgba(0,255,0,1)",
+                            data: data ,
+                        }
+                    ]
+                };
+                var line = new Chart(can).Line(canData)
+            }
+        )
+    </script>
+
+    <h3>/分区可用率</h3>
+    {{ vfs_base | safe }}
+    <h3>/home分区可用率</h3>
+{#    {{ vfs_home | safe }}#}
+    {% if vfs_home != '' %}
+        <h4 style="color: red">/home分区不存在</h4>
+    {% else %}
+        {{ vfs_home | safe }}
+    {% endif %}
+    <h3>SWAP可用率</h3>
+    {{ swap_pfree | safe }}
+
+</body>
+</html>

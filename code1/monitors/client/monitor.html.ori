@@ -1,0 +1,14 @@
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="refresh" content="5">
+<body style="background-color:yellow">
+<h1 style="background-color:red;font-family:verdana;text-align:center">This is Roarain's Monitor Console!</h1>
+<hr></hr>
+<h5>This is Load Average Image. Refresh every 5 seconds. </h2>
+<img src="img_loadaverage.png">
+<h5>This is CPU Stat. Refresh every 5 seconds. </h2>
+<img src="img_cpustat.png">
+<h5>This is Swap Image. Refresh every 5 seconds. </h2>
+<img src="img_swap.png">
+</body>
+</html>

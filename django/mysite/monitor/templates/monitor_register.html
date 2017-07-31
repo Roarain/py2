@@ -1,0 +1,265 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+    <style type="text/css">
+        h3{
+            position: relative;
+            top: 10px;
+            left: 350px;
+        }
+        .success-color{
+            color: green;
+        }
+        .error-color{
+            color: #e9322d;
+        }
+        .form11{
+            margin: 30px;
+        }
+    </style>
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <!--<link href="http://cdn.amazeui.org/amazeui/2.7.2/css/amazeui.min.css" rel="stylesheet">-->
+    <!--<script src="https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>-->
+    <!--<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
+    <script type="text/javascript">
+//        function clearname(){
+//            document.myform.uname.value="";
+//        }
+
+        function clearFeedback(arg) {   // 进入焦点的时候清楚状态判断
+            document.getElementById(arg).getElementsByTagName("span")[1].style.display="none";  // 进入焦点清除红色x号
+            document.getElementById(arg).getElementsByTagName("span")[2].style.display="none";  // 进入焦点,清空红色提醒语
+        }
+
+        var password1 = ''; // 第一次输入的密码变量
+        var password2 = ''; // 确认密码变量
+        var agreeDeal = false;  // 注册协议同意框判定
+
+        function checkUsername(arg){   // 判断用户名输入框
+            // 获取输入框value
+            var str = "document.registerform." + arg + ".value";
+            var value = eval(str);
+            if (value.match(/^\w{4,16}$/) == null) {
+                document.getElementById(arg).getElementsByTagName("span")[1].style.display="block"; // 输入不符合要求,弹出红色x号
+                document.getElementById(arg).getElementsByTagName("span")[2].style.display="block"; // 输入不符合要求,弹出红色提醒语
+                document.getElementById(arg).getElementsByTagName("span")[0].style.display="none"; // 输入不符合要求,清空绿色对号
+                return false;
+            }else {
+                document.getElementById(arg).getElementsByTagName("span")[0].style.display="block"; // 输入符合要求,弹出绿色对号
+                document.getElementById(arg).getElementsByTagName("span")[1].style.display="none"; // 输入符合要求,清空红色x号
+                document.getElementById(arg).getElementsByTagName("span")[2].style.display="none";  // 输入符合要求,清空红色提醒语
+                return true;
+            }
+        } // checkUsername() END
+
+        function checkPassword(arg) {   // 判断密码输入框
+            // 获取输入框value
+            var str = "document.registerform." + arg + ".value";
+            var value = eval(str);
+            password1 = value;
+            console.log('第一次密码: ' + password1);
+            if (value.match(/^\w{6,16}$/) == null){
+                document.getElementById(arg).getElementsByTagName("span")[1].style.display="block"; // 输入不符合要求,弹出红色x号
+                document.getElementById(arg).getElementsByTagName("span")[2].style.display="block"; // 输入不符合要求,弹出红色提醒语
+                document.getElementById(arg).getElementsByTagName("span")[0].style.display="none"; // 输入不符合要求,清空绿色对号
+                return false;
+            }
+            else {
+                document.getElementById(arg).getElementsByTagName("span")[0].style.display = "block"; // 输入符合要求,弹出绿色对号
+                document.getElementById(arg).getElementsByTagName("span")[1].style.display = "none"; // 输入符合要求,清空红色x号
+                document.getElementById(arg).getElementsByTagName("span")[2].style.display = "none";  // 输入符合要求,清空红色提醒语
+                return true;
+            }
+            // value = ''
+        }   // checkPassword() END
+
+        function checkPasswordagain(arg) { // 判断确认密码输入框
+            // 获取输入框value
+            var str = "document.registerform." + arg + ".value";
+            var value = eval(str);
+            password2 = value;
+            console.log('第二次密码: ' + password2);
+            if (password2 != password1 || password2 == ''){
+                document.getElementById(arg).getElementsByTagName("span")[1].style.display="block"; // 输入不符合要求,弹出红色x号
+                document.getElementById(arg).getElementsByTagName("span")[2].style.display="block"; // 输入不符合要求,弹出红色提醒语
+                document.getElementById(arg).getElementsByTagName("span")[0].style.display="none"; // 输入不符合要求,清空绿色对号
+                return false;
+            }else {
+                document.getElementById(arg).getElementsByTagName("span")[0].style.display = "block"; // 输入符合要求,弹出绿色对号
+                document.getElementById(arg).getElementsByTagName("span")[1].style.display = "none"; // 输入符合要求,清空红色x号
+                document.getElementById(arg).getElementsByTagName("span")[2].style.display = "none";  // 输入符合要求,清空红色提醒语
+                return true;
+            }
+            // value = ''
+        }   // checkPasswordagain() END
+
+
+        function checkEmail(arg){   // 判断邮箱输入框
+            // 获取输入框value
+            var str = "document.registerform." + arg + ".value";
+            var value = eval(str);
+            if (value.match(/^[\w-]+(\.[\w-]+)*@[\w-]+(\.[\w-]+)+$/) == null) {
+                document.getElementById(arg).getElementsByTagName("span")[1].style.display="block"; // 输入不符合要求,弹出红色x号
+                document.getElementById(arg).getElementsByTagName("span")[2].style.display="block"; // 输入不符合要求,弹出红色提醒语
+                document.getElementById(arg).getElementsByTagName("span")[0].style.display="none"; // 输入不符合要求,清空绿色对号
+                return false;
+            }else {
+                document.getElementById(arg).getElementsByTagName("span")[0].style.display="block"; // 输入符合要求,弹出绿色对号
+                document.getElementById(arg).getElementsByTagName("span")[1].style.display="none"; // 输入符合要求,清空红色x号
+                document.getElementById(arg).getElementsByTagName("span")[2].style.display="none";  // 输入符合要求,清空红色提醒语
+                return true;
+            }
+        } // checkEmail() END
+
+        function checkMobileNum(arg){   // 判断手机号输入框
+            // 获取输入框value
+            var str = "document.registerform." + arg + ".value";
+            var value = eval(str);
+            if (value.match(/^0?1[3|5|7|8][0-9]\d{8}$/) == null) {
+                document.getElementById(arg).getElementsByTagName("span")[1].style.display="block"; // 输入不符合要求,弹出红色x号
+                document.getElementById(arg).getElementsByTagName("span")[2].style.display="block"; // 输入不符合要求,弹出红色提醒语
+                document.getElementById(arg).getElementsByTagName("span")[0].style.display="none"; // 输入不符合要求,清空绿色对号
+                return false;
+            }else {
+                document.getElementById(arg).getElementsByTagName("span")[0].style.display="block"; // 输入符合要求,弹出绿色对号
+                document.getElementById(arg).getElementsByTagName("span")[1].style.display="none"; // 输入符合要求,清空红色x号
+                document.getElementById(arg).getElementsByTagName("span")[2].style.display="none";  // 输入符合要求,清空红色提醒语
+                return true;
+            }
+        } // checkMobileNum() END
+
+        function checkMobileAuthCode(arg) { // 判断手机验证码输入框
+            // 获取输入框value
+            var str = "document.registerform." + arg + ".value";
+            var value = eval(str);
+            // if (value.match(/^0?1[3|5|7|8][0-9]\d{8}$/) == null) {
+            if (value != 2017) {
+                document.getElementById(arg).getElementsByTagName("span")[1].style.display="block"; // 输入不符合要求,弹出红色x号
+                document.getElementById(arg).getElementsByTagName("span")[2].style.display="block"; // 输入不符合要求,弹出红色提醒语
+                document.getElementById(arg).getElementsByTagName("span")[0].style.display="none"; // 输入不符合要求,清空绿色对号
+                return false;
+            }else {
+                document.getElementById(arg).getElementsByTagName("span")[0].style.display="block"; // 输入符合要求,弹出绿色对号
+                document.getElementById(arg).getElementsByTagName("span")[1].style.display="none"; // 输入符合要求,清空红色x号
+                document.getElementById(arg).getElementsByTagName("span")[2].style.display="none";  // 输入符合要求,清空红色提醒语
+                return true;
+            }
+        }   // checkMobileAuthCode() END
+
+        function checkAgreeDeal(arg) { // 判断是否接受注册协议
+            // 获取输入框value
+            var str = "document.registerform." + arg + ".value";
+            var value = eval(str);
+            // if (value.match(/^0?1[3|5|7|8][0-9]\d{8}$/) == null) {
+            console.log("未勾选注册协议同意框的判定状态: " + agreeDeal);
+            if (value != 'agree') {
+                document.getElementById(arg).getElementsByTagName("span")[0].style.display="block"; // 输入不符合要求,弹出红色提醒语
+                return false;
+            }else {
+                document.getElementById(arg).getElementsByTagName("span")[0].style.display="none";  // 输入符合要求,清空红色提醒语
+                agreeDeal = true;
+                console.log("勾选注册协议同意框后的判定状态: " + agreeDeal);
+                return true;
+            }
+        }
+
+
+//        // 验证年龄
+//        function checkage(){
+//            var uage = document.myform.age.value;
+//            if(uage.match(/^[0-9]{1,3}$/)==null){
+//                alert("年龄必须为1-3位数字构成");
+//                return false;
+//            }
+//            return true
+//        }
+
+{#        function registerNow() {    // 判断所有框返回值是否正确, 进入注册成功页面#}
+{#            if (checkUsername('inputUsername') && checkPassword('inputPassword') && checkPasswordagain('inputPasswordAgain') && checkEmail('inputEmail') && checkMobileNum('inputMobileNum') && checkMobileAuthCode('inputMoblieAuthCode') && agreeDeal){#}
+{#                alert("恭喜你! 注册成功")#}
+{#            }#}
+{#        }#}
+    </script>
+</head>
+<body>
+    <h3>欢迎注册</h3>
+    <form class="form11 form-horizontal" name="registerform" action="" method="post" onsubmit="registerNow()">{% csrf_token %}
+    <!--<form class="form-horizontal" name="registerform" action="" method="post">-->
+        <div class="form-group" id="inputUsername">    <!--用户名-->
+            <label class="col-sm-2 control-label">用 户 名</label>
+            <div class="col-sm-2 has-feedback">
+                <input type="text" class="form-control" name="inputUsername" placeholder="你的账户名和登录名" onblur="checkUsername('inputUsername')" onfocus="clearFeedback('inputUsername')">
+                <span class="glyphicon glyphicon-ok form-control-feedback success-color" aria-hidden="true" style="display: none"></span>
+                <span class="glyphicon glyphicon-remove form-control-feedback error-color" aria-hidden="true" style="display: none"></span>
+            </div>
+            <span id="helpBlock1" class="help-block" style="color: #e9322d; display: none;">用户名必须为4-16位,仅支持英文、数字和下划线,且不能为纯数字</span>
+        </div>
+        <div class="form-group" id="inputPassword">    <!--设置密码-->
+            <label class="col-sm-2 control-label">设置密码</label>
+            <div class="col-sm-2 has-feedback">
+                <input type="password" class="form-control" name="inputPassword" placeholder="建议至少使用两种字符组合" onblur="checkPassword('inputPassword')" onfocus="clearFeedback('inputPassword')">
+                <span class="glyphicon glyphicon-ok form-control-feedback success-color" aria-hidden="true" style="display: none"></span>
+                <span class="glyphicon glyphicon-remove form-control-feedback error-color" aria-hidden="true" style="display: none"></span>
+            </div>
+            <span id="helpBlock2" class="help-block" style="color: #e9322d; display: none;">密码长度只能在6-20个字符之间</span>
+        </div>
+        <div class="form-group" id="inputPasswordAgain">    <!--重复密码-->
+            <label class="col-sm-2 control-label">确认密码</label>
+            <div class="col-sm-2 has-feedback">
+                <input type="password" class="form-control" name="inputPasswordAgain" placeholder="请再次输入密码" onblur="checkPasswordagain('inputPasswordAgain')" onfocus="clearFeedback('inputPasswordAgain')">
+                <span class="glyphicon glyphicon-ok form-control-feedback success-color" aria-hidden="true" style="display: none"></span>
+                <span class="glyphicon glyphicon-remove form-control-feedback error-color" aria-hidden="true" style="display: none"></span>
+            </div>
+            <span id="helpBlock3" class="help-block" style="color: #e9322d; display: none;">两次输入密码不一致</span>
+            <span id="helpBlock31" class="help-block" style="color: #e9322d; display: none;">请再次输入密码</span>
+        </div>
+        <div class="form-group" id="inputEmail">    <!--邮箱验证-->
+            <label class="col-sm-2 control-label">邮箱验证</label>
+            <div class="col-sm-2 has-feedback">
+                <input type="email" class="form-control" name="inputEmail" placeholder="建议使用常用邮箱" onblur="checkEmail('inputEmail')" onfocus="clearFeedback('inputEmail')">
+                <span class="glyphicon glyphicon-ok form-control-feedback success-color" aria-hidden="true" style="display: none"></span>
+                <span class="glyphicon glyphicon-remove form-control-feedback error-color" aria-hidden="true" style="display: none"></span>
+            </div>
+            <span id="helpBlock4" class="help-block" style="color: #e9322d; display: none;">邮箱格式错误</span>
+        </div>
+        <div class="form-group" id="inputMobileNum">    <!--手机号-->
+            <label class="col-sm-2 control-label">手 机 号</label>
+            <div class="col-sm-2 has-feedback">
+                <input type="text" class="form-control" name="inputMobileNum" placeholder="建议使用常用手机" onblur="checkMobileNum('inputMobileNum')" onfocus="clearFeedback('inputMobileNum')">
+                <span class="glyphicon glyphicon-ok form-control-feedback success-color" aria-hidden="true" style="display: none"></span>
+                <span class="glyphicon glyphicon-remove form-control-feedback error-color" aria-hidden="true" style="display: none"></span>
+            </div>
+            <span id="helpBlock5" class="help-block" style="color: #e9322d; display: none;">格式有误, 请输入11位数字手机号码</span>
+        </div>
+        <div class="form-group" id="inputMoblieAuthCode">    <!--手机验证码-->
+            <label class="col-sm-2 control-label">手机验证码</label>
+            <div class="col-sm-2 has-feedback">
+                <input type="text" class="form-control" name="inputMoblieAuthCode" placeholder="测试输入2017即正确" maxlength="4" onblur="checkMobileAuthCode('inputMoblieAuthCode')" onfocus="clearFeedback('inputMoblieAuthCode')">
+                <span class="glyphicon glyphicon-ok form-control-feedback success-color" aria-hidden="true" style="display: none"></span>
+                <span class="glyphicon glyphicon-remove form-control-feedback error-color" aria-hidden="true" style="display: none"></span>
+            </div>
+            <span id="helpBlock6" class="help-block" style="color: #e9322d; display: none;">验证码不正确</span>
+        </div>
+        <div class="form-group" id="agreeDeal">    <!--同意注册协议-->
+            <div class="col-sm-offset-2 col-sm-10">
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" name="agreeDeal" value="agree" onchange="checkAgreeDeal('agreeDeal')"> 同意注册协议
+                    </label>
+                    <span id="helpBlock7" class="help-block" style="color: #e9322d; display: none">请接受注册协议</span>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">    <!--立即注册按钮-->
+            <div class="col-sm-offset-2 col-sm-10">
+                <button type="submit" class="btn btn-success">立即注册</button>
+                <!--<button type="submit" class="btn btn-success" onclick="registerNow()">立即注册</button>-->
+            </div>
+        </div>
+    </form>
+<!--onfocus="clearFeedback('agreeDeal')"-->
+</body>
+</html>

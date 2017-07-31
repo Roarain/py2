@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AutoJumpPage</title>
+</head>
+<body>
+{#    {{ regist_successful }}#}
+    {% if autojump == 'regist_success' %}
+        <h1 style="color: greenyellow">
+            用户{{ username }}注册成功，点击此处跳转到
+                <a href="/clocmdb/login/">登陆页面</a>
+        </h1>
+    {% elif autojump == 'regist_faild' %}
+        <h1 style="color: yellowgreen">
+            用户{{ username }}已存在，请
+                <a href="/clocmdb/login/">登陆</a>
+            或使用其他用户名
+                <a href="/clocmdb/register/">重新注册</a>
+        </h1>
+    {% elif autojump == 'login_faild' %}
+        <h1 style="color: lawngreen">
+            用户{{ username }}用户名或密码错误，请重新
+                <a href="/clocmdb/login/">登陆</a>
+        </h1>
+    {% endif %}
+</body>
+</html>

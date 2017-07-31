@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  {% block title %}<title>{{ page_title }}</title>{% endblock %}
+    <!-- Bootstrap -->
+    {% load staticfiles %}
+    <!--<link herf="{% static 'monitor/login/css/styles.css' %}" rel="stylesheet" media="screen">-->
+    <!--<link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.css' %}" media="screen" title="no title" charset="utf-8">-->
+    <link href="{% static 'monitor/login/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet" media="screen">
+    <link href="{% static 'monitor/login/bootstrap/css/bootstrap-responsive.min.css' %}" rel="stylesheet" media="screen">
+    <link href="{% static 'monitor/login/css/styles.css' %}" rel="stylesheet" media="screen">
+
+
+     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <script src="{% static 'monitor/login/js/modernizr-2.6.2-respond-1.1.0.min.js' %}"></script>
+  </head>
+  <body id="login">
+    <div class="container">
+
+        <form class="form-signin " action="" method="post" > {%  csrf_token %}
+          <h2 class="form-signin-heading">Monitor sign in</h2>
+          <!--{{myform.username}}<br>-->
+          <!--{{myform.password}}<br>-->
+          <input type="text" name="username" class="input-block-level" placeholder="Username">
+          <input type="password" name="password" class="input-block-level" placeholder="Password">
+          <label class="checkbox">
+            <input type="checkbox" value="remember-me"> Remember me
+          </label>
+           <div style="color:red;"><h4>{{ error }}</h4></div>
+          <button class="btn btn-large btn-primary" type="submit">Sign in</button>
+            <div>
+                {% if login_err %}
+                <p style="color: red">{{ login_err }}</p>
+                {% endif %}
+            </div>
+        </form>
+    </div> <!-- /container -->
+    <script src="{% static 'monitor/login/jquery/jquery-1.9.1.min.js' %}"> </script>
+    <script src="{% static 'monitor/login/js/bootstrap.min.js' %}"> </script>
+  </body>
+</html>

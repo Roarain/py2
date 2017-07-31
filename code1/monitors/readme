@@ -1,0 +1,31 @@
+client:
+    1:psutil get
+        system load average
+        cpu model
+        cpu rate
+        memory rate
+        disk rate
+    2:mysql table
+        machineinfo
+            id    IP  user    password    type
+        sysload
+            one,five,fifteen,current_time
+        cpuinfo
+            physical_id,processor,model
+        cpurate
+            physical_id,processor,us,sy,id,current_time
+        memoryinfo
+            total,used,free,shared,buff/cache,available,current_time
+        swapinfo
+            total,used,free,current_time
+        diskinfo
+            name,size,used,avaible,current_time
+        psinfo
+            total,,current_time
+server:
+    1:get info from  mysql
+    2:login
+    3:choos machine
+    4:Graphically displayed in the page
+
+

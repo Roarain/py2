@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% block title %}
+        <title>Base</title>
+    {% endblock %}
+</head>
+<body>
+    <h1>This is Base Page ...</h1>
+    {% include 'say.html' %}
+        {% block content1 %}
+            <h2 style="color: red;">Base Page Content</h2>
+        {% endblock %}
+    {% block image %}
+        <image src="/static/images/qq.jpg"></image>
+    {% endblock %}
+    {% include 'hello.html' %}
+</body>
+</html>

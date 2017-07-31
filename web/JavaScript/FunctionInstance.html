@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FunctionInstance</title>
+</head>
+<body>
+    <script type="text/javascript">
+//        no arg
+//        function sum() {
+//            var total = 0;
+//            for (var i=1;i<10;i++){
+//                total += i;
+//            }
+//            return total
+//        }
+//        document.write('Result is: '+sum()+'</br>')
+
+//        1 arg
+//        function sum(a) {
+//            var total = 0;
+//            for (var i=1;i<a;i++){
+//                total += i;
+//            }
+//            return total
+//        }
+//        document.write('Result is: '+sum(100)+'</br>')
+
+//        more argumets
+        function sum_enhanced() {
+            var total = 0;
+            for (var i=1;i<arguments.length;i++){
+                total += arguments[i];
+            }
+            return total
+        }
+        document.write('Result is: '+sum_enhanced(1,2,3,4,5)+'</br>');
+    </script>
+</body>
+</html>

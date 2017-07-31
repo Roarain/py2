@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+</head>
+<br>
+    <h1 style="color: red">This is Main Index page</h1>
+    <h2 style="color: aqua">{{html1}}</h2>
+    <h3 style="color: blue">{{ hostname }}</h3>
+{#    {{ hostname | safe}}#}
+
+{#    {% for host in host_list %}#}
+{#        {% if host.hostname == 'node1' %}#}
+{#            <h1 style="color: yellow">{{ host.hostname }}</h1>#}
+{#        {% elif host.hostname == 'node3' %}#}
+{#            <h2 style="color: green">{{ host.hostname }}</h2>#}
+{#        {% else %}#}
+{#            {{ host.hostname }}<br>#}
+{#        {% endif %}#}
+{##}
+{#    {% endfor %}#}
+    {% for host in host_list %}
+{#        {% if forloop.counter > 3 %}#}
+{#        {% if forloop.counter0 > 3 %}#}
+        {% if forloop.counter|divisibleby:"2" %}
+            <h2 style="font-size: 100px ;color:greenyellow">{{ host.hostname }}</h2>
+        {% else %}
+            {{ host.hostname }}
+        {% endif %}
+    {% endfor %}
+</body>
+</html>

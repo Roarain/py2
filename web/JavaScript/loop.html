@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Loop</title>
+</head>
+<body>
+    <script type="text/javascript">
+        for (var i=1;i<10;i++){
+            document.write(i+'</br>');
+        }
+
+        var l1 = [1,2,3,4,5];
+        for (var i=0;i<l1.length;i++){
+            document.write(l1[i]+'&nbsp;');
+        }
+        document.write('<hr>');
+
+        for (var i in l1){
+            document.write(l1[i]+'&nbsp;')
+        }
+        document.write('<hr>');
+
+        var arr = new Array();
+        arr['name'] = 'Roarain';
+        arr.age = 27;
+        arr.like = 'NH';
+        for (i in arr){
+            document.write(arr[i]+'&nbsp;');
+        }
+        document.write('<hr>');
+    </script>
+</body>
+</html>

@@ -1,0 +1,969 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit">
+    <meta name="force-rendering" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+                <title>志愿填报系统-按录取位次段查询 - 升学e网通、升学助考一网通</title>
+    <meta name="Keywords" content="升学e网通,在线教育,视频学习,升学测评,复习备考,志愿填报,远程教育,网校,招生,报考,高考,真题,名校名师,试题,答案,辅导,教程">
+    <meta name="Description" content="升学e网通集助学、助考、和升学为一体，是国内最领先的高中生综合指导系统，专为高中同学打造的提供视频学习、助学备考、志愿填报、升学报考等服务的平台。帮助高中学生明确学习目标、培养学习习惯、夯实基础知识，让您的学习更轻松！">
+    <meta name="Author" content="">
+
+    <link rel="shortcut icon" href="http://common.ewt360.com/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="http://common.ewt360.com/favicon.ico" type="image/ico">
+    <link rel="stylesheet" type="text/css" href="http://cdn.ewt360.com/ewt360/css/common.min.css?t=20170626" />
+<script type="text/javascript" src="http://cdn.ewt360.com/common/js/jquery-1.11.2.min.js"></script>
+<script type="text/javascript" src="http://passport.ewt360.com/Ajax/GetUser?type=1"></script>
+
+<!--[if lt IE 9]>
+	<script src="http://cdn.ewt360.com/common/js/html5shiv.min.js"></script>
+	<![endif]-->
+<!--[if IE 6]>
+	<script type="text/javascript" src="http://cdn.ewt360.com/common/js/DD_belatedPNG.js"></script>
+	<![endif]-->
+
+    
+    <link rel="stylesheet" type="text/css" href="http://cdn.ewt360.com/ewt360/css/applynation.min.css?t=20170626" />
+
+</head>
+
+<body>
+
+<div class="wraper curriculaSearch">
+
+    <style type="text/css">
+.W1000{width:1000px;margin-left:auto;margin-right:auto;}.siteNav{background-color:#ebebeb;padding:3px 0;height:30px;line-height:30px;color:#999}.siteNav a{color:#000;font-size:12px;font-family:"SimSun"}.siteNav a:hover{color:#08c}.loginStatus,.loginStatusName{display:inline-block;*display:inline;*zoom:1;}.loginStatus{vertical-align:middle;position:relative;z-index:6;}.loginStatus .actCard{background-color:#00a4ef;padding:2px 5px;color:#fff;border-radius:3px;}.loginStatus .actCard:hover{color:#fff;}.loginStatusName{position:relative;padding-right:15px;}.siteNav .loginStatusName .arrow {content:"";height:0;width:0;overflow:hidden;border-top:5px solid #999;border-left:5px dashed transparent;border-right:5px dashed transparent;position:absolute;right:0;top:12px;}.lgStatusDrop{position:absolute;right:0;top:31px;border:1px solid #ebebeb;width:108px;z-index:7;background-color:#fff;text-align:center;display:none;}.lgStatusDrop dd{border-bottom:1px solid #ebebeb;height:30px;line-height:30px;}.lgStatusDrop a{display:block;color:#666;}.lgStatusDrop a:hover{color:#00a4ef;}
+</style>
+<div class="siteNav" id="siteNav">
+    <ul class="W1000 clearfix">
+        <li class="fl">
+            <a href="/" class="mrgR5">首页</a>|
+            <a href="http://study.ewt360.com" class="mrgL5 mrgR5">E讲堂</a>|
+            <a href="http://xinli.ewt360.com" class="mrgL5 mrgR5">心灵成长</a>|
+            <a href="/Apply" class="mrgL5 mrgR5">生涯规划</a>|
+            <a href="/News" class="mrgL5 mrgR5">高中资讯</a>|
+            <a href="/skip/bbs?fromurl=http://bbs.ewt360.com/" target="_blank" class="mrgL5">E社区</a>
+        </li>
+        <li class="fr">
+            <a href="/template/download/" class="mrgR5" target="_blank">手机客户端</a>|
+            <div class="loginStatus" id="loginStatus">
+                <a href="http://passport.ewt360.com/login" class="mrgL5 mrgR5">登录</a>|
+                <a href="/Register2/Register" class="mrgL5">注册</a>
+            </div>
+        </li>
+    </ul>
+</div><!-- siteNav end -->
+<script type="text/javascript">var loginStatus=$("#loginStatus"),loginStatusTimer=0;if(User.IsLogin){if(User.LevelName.indexOf("注册会员")>-1){loginStatus.html('<a href="/Register2/CardConfirm" class="mrgL5 mrgR5 actCard" target="_blank">激活</a>|<a href="/member" class="mrgL5" target="_blank">'+User.RealName+"</a>")}else{var loginStatusTemp='<a href="/member" class="mrgL5 loginStatusName" target="_blank">';if(User.RealName!=""&&User.RealName.length>0){loginStatusTemp+=User.RealName}else{loginStatusTemp+="个人中心"}loginStatusTemp+='<span class="arrow"></span></a>';loginStatusTemp+='<dl class="lgStatusDrop"><dd><a href="/member/UserInfo" target="_blank">我的账号</a></dd><dd><a href="/member/notice" target="_blank">我的消息</a></dd>';loginStatusTemp+='<dd><a href="/Member/MyOrder" target="_blank">我的订单</a></dd>';if(User.Province.indexOf("江西")>-1){loginStatusTemp+='<dd><a href="http://www.ewt360.com/Member/Myclass">我的班级</a></dd>'}loginStatusTemp+='<dd><a href="/member/logout">退出</a></dd></dl>';loginStatus.html(loginStatusTemp)}}$("#loginStatus a.loginStatusName").hover(function(){clearTimeout(loginStatusTimer);$(this).parent().find("dl.lgStatusDrop").slideDown()},function(){var a=$(this);loginStatusTimer=setTimeout(function(){a.parent().find("dl.lgStatusDrop").hide()},300)});$("#loginStatus dl.lgStatusDrop").hover(function(){clearTimeout(loginStatusTimer);$(this).show()},function(){$(this).hide()});
+/* */
+</script>
+
+
+
+    
+
+<div class="studyHeader">
+    <div class="W1000 clearfix">
+        <h1 class="fl">
+            <a href="/">
+                <img src="http://cdn.ewt360.com/ewt360/images/images/ew360_logo.png" class="pngFix" alt="升学e网通">
+            </a>
+        </h1>
+        <div class="studySearch fr applySearch">
+            <form action="/applymaps3d/detail" id="fmApplySearch">
+                <input type="text" placeholder="今天北京大学发生了什么？速看3D地图" name="keyword" class="fmTxt"><input type="submit" value="3D校园" class="fmSubmit">
+            </form>
+        </div>
+    </div>
+</div>
+<div class="applyNav" id="applyNav">
+    <div class="W1000 clearfix">
+        <ul class="clearfix">
+            <li class="fl"><a href="/Apply/ApplyIndex">了解报考</a></li>
+                <li class="fl"><a href="/Apply/ScoreEntrance">历年录取信息</a></li>
+            <li class="fl"><a href="/ApplyEvaluation">专业测评系统</a></li>
+            <li class="fl hasMenu" id="zjNav">
+                <a href="javascript:void(0)" style="cursor: default;">升学宝库</a> <i class="arrow"></i>
+                <dl class="menu">
+                    
+                    <dd>
+                        <a href="/ApplyCollegeNew">院校信息库</a>
+                    </dd>
+                    <dd>
+                        <a href="/Professions">专业信息库</a>
+                    </dd>
+                    <dd>
+                        <a href="/ApplyCareerNew">职业宝库</a>
+                    </dd>
+                </dl>
+            </li>
+                <li class="fl"><a href="/ApplyNationEvaluation">志愿填报流程</a></li>
+                            <li class="fl"><a href="/Innovate" target="_blank">数说报考</a></li>
+
+            <li class="fr hasMenu">
+                <a href="/ApplyNationExamInfo">我的报考</a> <i class="arrow">
+                </i>
+                <dl class="menu">
+                    <dd>
+                        <a href="/ApplyNationExamInfo/MyTest">我的测评报告</a>
+                    </dd>
+                    <dd>
+                        <a href="/ApplyNationContrast/Index?type=2">我收藏的志愿</a>
+                    </dd>
+                    
+                </dl>
+            </li>
+        </ul>
+    </div>
+</div>
+<input type="hidden" id="applyNavAction" value="dataquery" />
+
+    
+
+
+
+<div class="W1000 queryInformation">
+	    
+    <h1 class="title mrgB25"><span><text>河南</text>理科-历年录取信息查询</span>
+    
+    </h1>
+
+	<section class="applyQuery mrgB30 specialQuery" id="applyQuery">
+		<ul class="tabs clearfix">
+<li ><a href="/ApplyNation/TouDangWeiCi?type=1">按院校投档分位次查询</a></li>
+    <li ><a href="/ApplyNation/AvgWeiCi?type=1">按专业平均分位次查询</a></li>
+<li   class="cur"  ><a href="/ApplyNation/WeiCiRange?type=1">按录取位次段查询</a></li>
+<li ><a href="/ApplyNation/Major?type=1">按专业名称查询</a></li>
+<li ><a href="/ApplyNation/CollegeAndMajor?type=1">按院校专业名称查询</a></li>		</ul>
+
+		<div class="querycriteria">
+			<dl>
+	            <dd class="mrgB20">
+	                <div class="years inline-block">
+	                    <span class="inline-block fmLabel">报考年份：</span>
+	                    <div class="dropDown inline-block" data-event="hw-select">
+	                        <span class="txt">2016年</span> <span class="txtArrow"></span><span class="arrow"></span>
+	                        <ul class="checkLists slideDownList" data-eventlist="hw-select-yearslist" id="hw-select-year" data-selectlist="hw-select-lists">
+                                        <li data-value="2016" data-select="False">2016年</li>
+                                        <li data-value="2015" data-select="False">2015年</li>
+                                        <li data-value="2014" data-select="False">2014年</li>
+	                        </ul>
+	                        <input type="hidden" value="2016" id="Years" name="Years">
+	                    </div>
+	                </div>
+	                <div class="cengci inline-block">
+	                    <span class="inline-block fmLabel">报考层次：</span>
+	                    <div class="dropDown inline-block" data-event="hw-select">
+	                        <span class="txt">本科</span> <span class="txtArrow"></span><span class="arrow"></span>
+	                        <ul class="checkLists slideDownList" data-eventlist="hw-select-bzList" id="hw-select-bz" data-selectlist="hw-select-lists">
+                                        <li data-value="b">本科</li>
+                                        <li data-value="z">专科</li>
+	                        </ul>
+	                        <input type="hidden" value="b" id="BZ" name="BZ">
+	                    </div>
+	                </div>
+	                <div class="pici inline-block">
+	                    <span class="inline-block fmLabel">报考批次：</span>
+	                    <div class="dropDown inline-block" data-event="hw-select" id="hw-select-pici">
+	                        <span class="txt">本科二批</span> <span class="txtArrow"></span><span class="arrow"></span>
+	                        <ul class="checkLists slideDownList" data-eventlist="hw-select-picilist" id="hw-select-picis" data-selectlist="hw-select-lists">
+                                    <li data-value="0">不限</li>
+                                    <li data-value="1">本科提前批</li>
+                                    <li data-value="2">本科一批</li>
+                                    <li data-value="3">本科二批</li>
+                                    <li data-value="4">本科三批</li>
+	                        </ul>
+	                        <input type="hidden" value="3" id="PiCi" name="PiCi">
+	                    </div>
+	                </div>
+	            </dd>
+	            <dd class="mrgB10">
+
+                            <div class="chaofen inline-block">
+                                <span class="inline-block fmLabel">&nbsp;&nbsp;&nbsp;位次段：</span>
+                                <input type="text" id="minweicirange" name="minweicirange" class="fmTxt overtake" value="100000">
+                                <span class="line">——</span>
+                                <input type="text" id="maxweicirange" name="maxweicirange" class="fmTxt overtake" value="120000">
+                                
+                            </div>
+                </dd>
+
+                <input type="hidden" id="WL" name="WL" value="l" />
+                <input type="hidden" id="querytype" name="querytype" value="9" />
+                <input type="hidden" id="userProvinceId" name="userProvinceId" value="410000" />
+                <input type="hidden" id="userProvinceName" name="userProvinceName" value="河南" />
+                <input type="hidden" id="type" name="type" value="1" />
+
+                <dt>
+                    <p class="error" id="error"></p>
+	            	<input type="button" class="fmSubmit" id="submitQuery" value="查询">
+
+	            </dt>
+	        </dl>
+		</div>
+	</section>
+<input type="hidden" id="mywenli" name="mywenli" value="2" />
+<input type="hidden" id="mygrade" name="mygrade" value="3" />
+
+<style type="text/css"> .wccx {width: 67px; height: 121px; padding-top: 35px; position: fixed; left: 50%; bottom: 400px; margin-left: 510px; background: url(http://cdn.ewt360.com/ewt360/images/images/wccx.png?v=RxME5mIjJVmmeXFZHOPMXg%3D%3D) no-repeat 0 0; _position: absolute; _top: expression((document.compatMode && document.compatMode=='CSS1Compat' ? documentElement.scrollTop+(documentElement.clientHeight - this.clientHeight):document.body.scrollTop+(document.body.clientHeight - this.clientHeight))-400); } .wccx a {display: block; width: 50px; height: 60px; line-height: 200px; overflow: hidden; display: block; } </style>
+<div class="wccx">
+
+    <a href="        http://study.ewt360.com/KeCheng/Detail/2224?LessonId=9700
+" target="_blank" class="gl">报考攻略</a>
+    <a href="/SearchWeiCi" target="_blank" class="wc">查询位次</a>
+</div>
+
+
+
+
+	    <section class="selfPreference mrgB15" id="selfPreference">
+		个人偏好：
+		<div class="inline-block condition">
+			<span class="general">
+                    按院校所在地筛选
+            </span>
+
+			<div class="conditionLists provinces" id="provincesFilter">
+				<span class="arrow"></span>
+                <a data-proid="all" class="all" data-ns="" href="javascript:;" data-checked="true"><i class="check checked"></i>不限</a>
+                <ul class="hw-tooltip-grp provinceids">
+                    <li class="row clearfix">
+                        <div class="left">
+                            <a href="javascript:;" data-ns="hw-check-gp" data-check-gp="hb"><i class="check"></i>华北</a>
+                        </div>
+                        <div class="aleft">
+                            <a data-proid="110000" data-ns="hw-check" data-check-child="hb" href="javascript:;"><i class="check"></i>北京</a>
+                            <a data-proid="150000" data-ns="hw-check" data-check-child="hb" href="javascript:;"><i class="check"></i>内蒙古</a>
+                            <a data-proid="120000" data-ns="hw-check" data-check-child="hb" href="javascript:;"><i class="check"></i>天津</a>
+                            <a data-proid="130000" data-ns="hw-check" data-check-child="hb" href="javascript:;"><i class="check"></i>河北</a>
+                            <a data-proid="140000" data-ns="hw-check" data-check-child="hb" href="javascript:;"><i class="check"></i>山西</a>
+                        </div>
+                    </li>
+                    <li class="row clearfix">
+                        <div class="left">
+                            <a href="javascript:;" data-ns="hw-check-gp" data-check-gp="sb" ><i class="check"></i>东北</a>
+                        </div>
+                        <div class="aleft">
+                            <a data-proid="210000" data-ns="hw-check" data-check-child="sb"  href="javascript:;"><i class="check"></i>辽宁</a>
+                            <a data-proid="230000" data-ns="hw-check" data-check-child="sb"  href="javascript:;"><i class="check"></i>黑龙江</a>
+                            <a data-proid="220000" data-ns="hw-check" data-check-child="sb" href="javascript:;"><i class="check"></i>吉林</a>
+                        </div>
+                    </li>
+                    <li class="row clearfix">
+                        <div class="left">
+                            <a href="javascript:;" data-ns="hw-check-gp" data-check-gp="hd"><i class="ui-applyIcon2 check"></i>华东</a>
+                        </div>
+                        <div class="aleft">
+                            <a data-proid="310000" data-ns="hw-check" href="javascript:;" data-check-child="hd"><i class="check"></i>上海</a>
+                            <a data-proid="320000" data-ns="hw-check" href="javascript:;" data-check-child="hd"><i class="check"></i>江苏</a>
+                            <a data-proid="330000" data-ns="hw-check" href="javascript:;" data-check-child="hd"><i class="check"></i>浙江</a>
+                            <a data-proid="340000" data-ns="hw-check" href="javascript:;" data-check-child="hd"><i class="check"></i>安徽</a>
+                            <a data-proid="350000" data-ns="hw-check" href="javascript:;" data-check-child="hd"><i class="check"></i>福建</a>
+                            <a data-proid="360000" data-ns="hw-check" href="javascript:;" data-check-child="hd"><i class="check"></i>江西</a>
+                            <a data-proid="370000" data-ns="hw-check" href="javascript:;" data-check-child="hd"><i class="check"></i>山东</a>
+                        </div>
+                    </li>
+                    <li class="row clearfix">
+                        <div class="left">
+                            <a href="javascript:;" data-ns="hw-check-gp" data-check-gp="hz" ><i class="check"></i>华中</a>
+                        </div>
+                        <div class="aleft">
+                            <a data-proid="410000" data-ns="hw-check" href="javascript:;" data-check-child="hz"><i class="check"></i>河南</a>
+                            <a data-proid="430000" data-ns="hw-check" href="javascript:;" data-check-child="hz"><i class="check"></i>湖南</a>
+                            <a data-proid="420000" data-ns="hw-check" href="javascript:;" data-check-child="hz"><i class="check"></i>湖北</a>
+                        </div>
+                    </li>
+                    <li class="row clearfix">
+                        <div class="left">
+                            <a href="javascript:;" data-ns="hw-check-gp" data-check-gp="hn" ><i class="ui-applyIcon2 check"></i>华南</a>
+                        </div>
+                        <div class="aleft">
+                            <a data-proid="440000" data-ns="hw-check" href="javascript:;" data-check-child="hn"><i class="check"></i>广东</a>
+                            <a data-proid="450000" data-ns="hw-check" href="javascript:;" data-check-child="hn"><i class="check"></i>广西</a>
+                            <a data-proid="460000" data-ns="hw-check" href="javascript:;" data-check-child="hn"><i class="check"></i>海南</a>
+                        </div>
+                    </li>
+                    <li class="row clearfix">
+                        <div class="left">
+                            <a href="javascript:;" data-ns="hw-check-gp" data-check-gp="xn" ><i class="check"></i>西南</a>
+                        </div>
+                        <div class="aleft">
+                            <a data-proid="500000" data-ns="hw-check" href="javascript:;" data-check-child="xn"><i class="check"></i>重庆</a>
+                            <a data-proid="510000" data-ns="hw-check" href="javascript:;" data-check-child="xn"><i class="check"></i>四川</a>
+                            <a data-proid="520000" data-ns="hw-check" href="javascript:;" data-check-child="xn"><i class="check"></i>贵州</a>
+                            <a data-proid="530000" data-ns="hw-check" href="javascript:;" data-check-child="xn"><i class="check"></i>云南</a>
+                            <a data-proid="540000" data-ns="hw-check" href="javascript:;" data-check-child="xn"><i class="check"></i>西藏</a>
+                        </div>
+                    </li>
+                    <li class="row clearfix">
+                        <div class="left">
+                            <a href="javascript:;" data-ns="hw-check-gp" data-check-gp="xb" ><i class="check"></i>西北</a>
+                        </div>
+                        <div class="aleft">
+                            <a data-proid="620000" data-ns="hw-check" href="javascript:;" data-check-child="xb"><i class="check"></i>甘肃</a>
+                            <a data-proid="640000" data-ns="hw-check" href="javascript:;" data-check-child="xb"><i class="check"></i>宁夏</a>
+                            <a data-proid="630000" data-ns="hw-check" href="javascript:;" data-check-child="xb"><i class="check"></i>青海</a>
+                            <a data-proid="610000" data-ns="hw-check" href="javascript:;" data-check-child="xb"><i class="check"></i>陕西</a>
+                            <a data-proid="650000" data-ns="hw-check" href="javascript:;" data-check-child="xb"><i class="check"></i>新疆</a>
+                        </div>
+                    </li>
+                    <li class="row clearfix">
+                        <div class="left">
+                            <a href="javascript:;" data-ns="hw-check-gp" data-check-gp="qt" ><i class="check"></i>其他</a>
+                        </div>
+                        <div class="aleft">
+                            <a data-proid="990000" data-ns="hw-check" href="javascript:;" data-check-child="qt"><i class="check"></i>港澳台</a>
+                        </div>
+                    </li>
+                    <li class="row clearfix"><input type="button" class="fmSubmit" value="确定"></li>
+                </ul>
+            	<input type="hidden" value="" id="collegeprovince" name="collegeprovince" class="hw-tooltip-in" />
+            </div>
+		</div>
+
+		<div class="inline-block condition">
+            <span class="general">
+                    按院校类型筛选
+            </span>
+
+			<div class="conditionLists collegetypes" id="collegetypesFilter">
+				<span class="arrow"></span>
+                <a data-proid="all" class="all" data-ns="" href="javascript:;"  data-checked="true"><i class="check  checked"></i>不限</a>
+                <ul class="hw-tooltip-grp collegetypeids">
+                    <li>
+                                <a data-typeid="1" data-ns="hw-check" href="javascript:;"><i class="check"></i>综合</a>
+                                <a data-typeid="2" data-ns="hw-check" href="javascript:;"><i class="check"></i>工科</a>
+                                <a data-typeid="3" data-ns="hw-check" href="javascript:;"><i class="check"></i>农业</a>
+                                <a data-typeid="4" data-ns="hw-check" href="javascript:;"><i class="check"></i>林业</a>
+                                <a data-typeid="5" data-ns="hw-check" href="javascript:;"><i class="check"></i>医药</a>
+                                <a data-typeid="6" data-ns="hw-check" href="javascript:;"><i class="check"></i>师范</a>
+                                <a data-typeid="7" data-ns="hw-check" href="javascript:;"><i class="check"></i>语言</a>
+                                <a data-typeid="8" data-ns="hw-check" href="javascript:;"><i class="check"></i>财经</a>
+                                <a data-typeid="9" data-ns="hw-check" href="javascript:;"><i class="check"></i>政法</a>
+                                <a data-typeid="10" data-ns="hw-check" href="javascript:;"><i class="check"></i>体育</a>
+                                <a data-typeid="11" data-ns="hw-check" href="javascript:;"><i class="check"></i>艺术</a>
+                                <a data-typeid="12" data-ns="hw-check" href="javascript:;"><i class="check"></i>民族</a>
+                                <a data-typeid="13" data-ns="hw-check" href="javascript:;"><i class="check"></i>军事</a>
+                    </li>
+                    <li class="row clearfix"><input type="button" class="fmSubmit" value="确定"></li>
+                </ul>
+            	<input type="hidden" value="" id="collegetype" name="collegetype" class="hw-tooltip-in" />
+            </div>
+		</div>
+
+		<div class="inline-block condition">
+            <span class="general">
+                    按专业分类筛选
+            </span>
+
+			<div class="conditionLists collegecats" id="collegecatsFilter">
+				<span class="arrow"></span>
+                <a data-proid="all" class="all" data-ns="" href="javascript:;"  data-checked="true"><i class="check  checked"></i>不限</a>
+                <ul class="hw-tooltip-grp collegecatids">
+                    <li>
+                                    <a class="benke" data-catid="哲学" data-ns="hw-check" href="javascript:;"><i class="check"></i>哲学</a>
+                                    <a class="benke" data-catid="经济学" data-ns="hw-check" href="javascript:;"><i class="check"></i>经济学</a>
+                                    <a class="benke" data-catid="法学" data-ns="hw-check" href="javascript:;"><i class="check"></i>法学</a>
+                                    <a class="benke" data-catid="教育学" data-ns="hw-check" href="javascript:;"><i class="check"></i>教育学</a>
+                                    <a class="benke" data-catid="文学" data-ns="hw-check" href="javascript:;"><i class="check"></i>文学</a>
+                                    <a class="benke" data-catid="历史学" data-ns="hw-check" href="javascript:;"><i class="check"></i>历史学</a>
+                                    <a class="benke" data-catid="理学" data-ns="hw-check" href="javascript:;"><i class="check"></i>理学</a>
+                                    <a class="benke" data-catid="工学" data-ns="hw-check" href="javascript:;"><i class="check"></i>工学</a>
+                                    <a class="benke" data-catid="农学" data-ns="hw-check" href="javascript:;"><i class="check"></i>农学</a>
+                                    <a class="benke" data-catid="医学" data-ns="hw-check" href="javascript:;"><i class="check"></i>医学</a>
+                                    <a class="benke" data-catid="管理学" data-ns="hw-check" href="javascript:;"><i class="check"></i>管理学</a>
+                                    <a class="benke" data-catid="艺术学" data-ns="hw-check" href="javascript:;"><i class="check"></i>艺术学</a>
+
+                                <a class="zhuanke" data-catid="农林牧渔" data-ns="hw-check" href="javascript:;"><i class="check"></i>农林牧渔</a>
+                                    <a class="zhuanke" data-catid="农林牧渔" data-ns="hw-check" href="javascript:;"><i class="check"></i>农林牧渔</a>
+                                <a class="zhuanke" data-catid="交通运输" data-ns="hw-check" href="javascript:;"><i class="check"></i>交通运输</a>
+                                    <a class="zhuanke" data-catid="交通运输" data-ns="hw-check" href="javascript:;"><i class="check"></i>交通运输</a>
+                                <a class="zhuanke" data-catid="生化与药品" data-ns="hw-check" href="javascript:;"><i class="check"></i>生化与药品</a>
+                                    <a class="zhuanke" data-catid="生化与药品" data-ns="hw-check" href="javascript:;"><i class="check"></i>生化与药品</a>
+                                <a class="zhuanke" data-catid="资源开发与测绘" data-ns="hw-check" href="javascript:;"><i class="check"></i>资源开发与测绘</a>
+                                    <a class="zhuanke" data-catid="资源开发与测绘" data-ns="hw-check" href="javascript:;"><i class="check"></i>资源开发与测绘</a>
+                                <a class="zhuanke" data-catid="材料与能源" data-ns="hw-check" href="javascript:;"><i class="check"></i>材料与能源</a>
+                                    <a class="zhuanke" data-catid="材料与能源" data-ns="hw-check" href="javascript:;"><i class="check"></i>材料与能源</a>
+                                <a class="zhuanke" data-catid="土建" data-ns="hw-check" href="javascript:;"><i class="check"></i>土建</a>
+                                    <a class="zhuanke" data-catid="土建" data-ns="hw-check" href="javascript:;"><i class="check"></i>土建</a>
+                                <a class="zhuanke" data-catid="水利" data-ns="hw-check" href="javascript:;"><i class="check"></i>水利</a>
+                                    <a class="zhuanke" data-catid="水利" data-ns="hw-check" href="javascript:;"><i class="check"></i>水利</a>
+                                <a class="zhuanke" data-catid="制造" data-ns="hw-check" href="javascript:;"><i class="check"></i>制造</a>
+                                    <a class="zhuanke" data-catid="制造" data-ns="hw-check" href="javascript:;"><i class="check"></i>制造</a>
+                                <a class="zhuanke" data-catid="电子信息" data-ns="hw-check" href="javascript:;"><i class="check"></i>电子信息</a>
+                                    <a class="zhuanke" data-catid="电子信息" data-ns="hw-check" href="javascript:;"><i class="check"></i>电子信息</a>
+                                <a class="zhuanke" data-catid="环保、气象与安全" data-ns="hw-check" href="javascript:;"><i class="check"></i>环保、气象与安全</a>
+                                    <a class="zhuanke" data-catid="环保、气象与安全" data-ns="hw-check" href="javascript:;"><i class="check"></i>环保、气象与安全</a>
+                                <a class="zhuanke" data-catid="轻纺食品" data-ns="hw-check" href="javascript:;"><i class="check"></i>轻纺食品</a>
+                                    <a class="zhuanke" data-catid="轻纺食品" data-ns="hw-check" href="javascript:;"><i class="check"></i>轻纺食品</a>
+                                <a class="zhuanke" data-catid="财经" data-ns="hw-check" href="javascript:;"><i class="check"></i>财经</a>
+                                    <a class="zhuanke" data-catid="财经" data-ns="hw-check" href="javascript:;"><i class="check"></i>财经</a>
+                                <a class="zhuanke" data-catid="医药卫生" data-ns="hw-check" href="javascript:;"><i class="check"></i>医药卫生</a>
+                                    <a class="zhuanke" data-catid="医药卫生" data-ns="hw-check" href="javascript:;"><i class="check"></i>医药卫生</a>
+                                <a class="zhuanke" data-catid="旅游" data-ns="hw-check" href="javascript:;"><i class="check"></i>旅游</a>
+                                    <a class="zhuanke" data-catid="旅游" data-ns="hw-check" href="javascript:;"><i class="check"></i>旅游</a>
+                                <a class="zhuanke" data-catid="公共事业" data-ns="hw-check" href="javascript:;"><i class="check"></i>公共事业</a>
+                                    <a class="zhuanke" data-catid="公共事业" data-ns="hw-check" href="javascript:;"><i class="check"></i>公共事业</a>
+                                <a class="zhuanke" data-catid="文化教育" data-ns="hw-check" href="javascript:;"><i class="check"></i>文化教育</a>
+                                    <a class="zhuanke" data-catid="文化教育" data-ns="hw-check" href="javascript:;"><i class="check"></i>文化教育</a>
+                                <a class="zhuanke" data-catid="艺术设计传媒" data-ns="hw-check" href="javascript:;"><i class="check"></i>艺术设计传媒</a>
+                                    <a class="zhuanke" data-catid="艺术设计传媒" data-ns="hw-check" href="javascript:;"><i class="check"></i>艺术设计传媒</a>
+                                <a class="zhuanke" data-catid="公安" data-ns="hw-check" href="javascript:;"><i class="check"></i>公安</a>
+                                    <a class="zhuanke" data-catid="公安" data-ns="hw-check" href="javascript:;"><i class="check"></i>公安</a>
+                                <a class="zhuanke" data-catid="法律" data-ns="hw-check" href="javascript:;"><i class="check"></i>法律</a>
+                                    <a class="zhuanke" data-catid="法律" data-ns="hw-check" href="javascript:;"><i class="check"></i>法律</a>
+                    </li>
+                    <li class="row clearfix"><input type="button" class="fmSubmit" value="确定"></li>
+                </ul>
+            	<input type="hidden" id="collegecatids" name="collegecatids" value="">
+            </div>
+		</div>
+	</section>
+
+
+
+	    <section class="resultInfor mrgB10">
+                <p class="collectVolunteer fr">已初步收藏<span class="orange" id="collectVolunteer">37</span>个志愿，<a href="/ApplyNationContrast?type=2" target="_blank">查看</a></p>
+                        在<span class="orange">河南</span>查询<span class="orange">2016</span>年，<span class="orange">理科</span>，<span class="orange">本科二批</span>，录取位次段<span class="orange">100000<text>-</text>120000</span>范围内，录取结果如下:
+    </section>
+
+
+<table class="resultTable jsEventTable spfirstTh">
+    <colgroup>
+        <col width="18%" />
+        <col width="9%" />
+        <col width="9%" />
+        <col width="13%" />
+        <col width="9%" />
+        <col width="9%" />
+        <col width="7%" />
+        <col width="7%" />
+        <col width="6%" />
+        <col width="7%" />
+        <col width="6%" />
+    </colgroup>
+    <tr>
+        <th>院校名称</th>
+        <th>院校投档分</th>
+        <th>院校投档<br />分位次</th>
+        <th >专业名称</th>
+            <th>专业录取<br />平均分</th>
+            <th   class="bold"  >平均分位次</th>
+        <th>专业录<br />取人数</th>
+        <th>本专科<br />批次</th>
+        <th>统计<br />图表</th>
+        <th>2017<br />招生计划</th>
+        <th>收藏</th>
+    </tr>
+            <tr>
+            <td class="college">
+                <div class="left">
+                        <p class="name"><a href="/Colleges/Introduction?CollegeID=421" title="辽宁师范大学(中外合作)" target="_blank">辽宁师范大学(中外合作)</a></p>
+
+
+
+
+
+
+                        <span class="tag inline-block blue">大连市</span>
+                </div>
+            </td>
+            <td>517</td>
+            <td>76938</td>
+            <td>工商管理类(中外合作办学)(国际商务)</td>
+                <td>491</td>
+                <td>106749</td>
+            <td>8</td>
+            <td>本科二批</td>
+                <td><a href="/ApplyNationChart/Chart?Year=&Type=l&BZ=b&PiCi=3&SchoolID=3500&SchoolName=%e8%be%bd%e5%ae%81%e5%b8%88%e8%8c%83%e5%a4%a7%e5%ad%a6(%e4%b8%ad%e5%a4%96%e5%90%88%e4%bd%9c)" target="_blank" class="applyfont chart">&#xe61a;</a></td>
+            <td><a href="javascript:;" class="see plan2017" data-collegeid="3500,3,辽宁师范大学(中外合作)">查看</a></td>
+            <td><a href="javascript:;" class="collect applyfont" data-collect="3500,19950,3,2016,b,421">&#xe612;</a></td>
+        </tr>
+            <tr>
+            <td class="college">
+                <div class="left">
+                        <p class="name"><a href="/Colleges/Introduction?CollegeID=1414" title="河南工业大学(中外合作)" target="_blank">河南工业大学(中外合作)</a></p>
+
+
+
+                        <span class="tag inline-block yellow">省属重点本科</span>
+
+
+
+                        <span class="tag inline-block blue">郑州市</span>
+                </div>
+            </td>
+            <td>510</td>
+            <td>84704</td>
+            <td>工商管理类(中外合作办学)(会计学)</td>
+                <td>482</td>
+                <td>117948</td>
+            <td>19</td>
+            <td>本科二批</td>
+                <td><a href="/ApplyNationChart/Chart?Year=&Type=l&BZ=b&PiCi=3&SchoolID=3376&SchoolName=%e6%b2%b3%e5%8d%97%e5%b7%a5%e4%b8%9a%e5%a4%a7%e5%ad%a6(%e4%b8%ad%e5%a4%96%e5%90%88%e4%bd%9c)" target="_blank" class="applyfont chart">&#xe61a;</a></td>
+            <td><a href="javascript:;" class="see plan2017" data-collegeid="3376,3,河南工业大学(中外合作)">查看</a></td>
+            <td><a href="javascript:;" class="collect applyfont" data-collect="3376,19612,3,2016,b,1414">&#xe612;</a></td>
+        </tr>
+            <tr>
+            <td class="college">
+                <div class="left">
+                        <p class="name"><a href="/Colleges/Introduction?CollegeID=181" title="华北科技学院" target="_blank">华北科技学院</a></p>
+
+
+
+
+
+
+                        <span class="tag inline-block blue">廊坊市</span>
+                </div>
+            </td>
+            <td>507</td>
+            <td>88055</td>
+            <td>采矿工程</td>
+                <td>493</td>
+                <td>104424</td>
+            <td>4</td>
+            <td>本科二批</td>
+                <td><a href="/ApplyNationChart/Chart?Year=&Type=l&BZ=b&PiCi=3&SchoolID=442&SchoolName=%e5%8d%8e%e5%8c%97%e7%a7%91%e6%8a%80%e5%ad%a6%e9%99%a2" target="_blank" class="applyfont chart">&#xe61a;</a></td>
+            <td><a href="javascript:;" class="see plan2017" data-collegeid="442,3,华北科技学院">查看</a></td>
+            <td><a href="javascript:;" class="collect applyfont" data-collect="442,15147,3,2016,b,181">&#xe612;</a></td>
+        </tr>
+            <tr>
+            <td class="college">
+                <div class="left">
+                        <p class="name"><a href="/Colleges/Introduction?CollegeID=181" title="华北科技学院(中外合作)" target="_blank">华北科技学院(中外合作)</a></p>
+
+
+
+
+
+
+                        <span class="tag inline-block blue">廊坊市</span>
+                </div>
+            </td>
+            <td>507</td>
+            <td>88055</td>
+            <td>安全科学与工程类(中外合作办学)(职业安全与公共健康)</td>
+                <td>482</td>
+                <td>117948</td>
+            <td>3</td>
+            <td>本科二批</td>
+                <td><a href="/ApplyNationChart/Chart?Year=&Type=l&BZ=b&PiCi=3&SchoolID=3729&SchoolName=%e5%8d%8e%e5%8c%97%e7%a7%91%e6%8a%80%e5%ad%a6%e9%99%a2(%e4%b8%ad%e5%a4%96%e5%90%88%e4%bd%9c)" target="_blank" class="applyfont chart">&#xe61a;</a></td>
+            <td><a href="javascript:;" class="see plan2017" data-collegeid="3729,3,华北科技学院(中外合作)">查看</a></td>
+            <td><a href="javascript:;" class="collect applyfont" data-collect="3729,40423,3,2016,b,181">&#xe612;</a></td>
+        </tr>
+            <tr>
+            <td class="college">
+                <div class="left">
+                        <p class="name"><a href="/Colleges/Introduction?CollegeID=1415" title="河南科技大学" target="_blank">河南科技大学</a></p>
+
+
+
+                        <span class="tag inline-block yellow">省属重点本科</span>
+
+
+
+                        <span class="tag inline-block blue">洛阳市</span>
+                </div>
+            </td>
+            <td>505</td>
+            <td>90348</td>
+            <td>园林</td>
+                <td>482</td>
+                <td>117948</td>
+            <td>70</td>
+            <td>本科二批</td>
+                <td><a href="/ApplyNationChart/Chart?Year=&Type=l&BZ=b&PiCi=3&SchoolID=351&SchoolName=%e6%b2%b3%e5%8d%97%e7%a7%91%e6%8a%80%e5%a4%a7%e5%ad%a6" target="_blank" class="applyfont chart">&#xe61a;</a></td>
+            <td><a href="javascript:;" class="see plan2017" data-collegeid="351,3,河南科技大学">查看</a></td>
+            <td><a href="javascript:;" class="collect applyfont" data-collect="351,15153,3,2016,b,1415">&#xe612;</a></td>
+        </tr>
+            <tr>
+            <td class="college">
+                <div class="left">
+                        <p class="name"><a href="/Colleges/Introduction?CollegeID=2374" title="兰州财经大学" target="_blank">兰州财经大学</a></p>
+
+
+
+
+
+
+                        <span class="tag inline-block blue">兰州市</span>
+                </div>
+            </td>
+            <td>503</td>
+            <td>92622</td>
+            <td>体育经济与管理</td>
+                <td>484</td>
+                <td>115431</td>
+            <td>2</td>
+            <td>本科二批</td>
+                <td><a href="/ApplyNationChart/Chart?Year=&Type=l&BZ=b&PiCi=3&SchoolID=487&SchoolName=%e5%85%b0%e5%b7%9e%e8%b4%a2%e7%bb%8f%e5%a4%a7%e5%ad%a6" target="_blank" class="applyfont chart">&#xe61a;</a></td>
+            <td><a href="javascript:;" class="see plan2017" data-collegeid="487,3,兰州财经大学">查看</a></td>
+            <td><a href="javascript:;" class="collect applyfont" data-collect="487,34373,3,2016,b,2374">&#xe612;</a></td>
+        </tr>
+            <tr>
+            <td class="college">
+                <div class="left">
+                        <p class="name"><a href="/Colleges/Introduction?CollegeID=2203" title="云南中医学院" target="_blank">云南中医学院</a></p>
+
+
+
+
+
+
+                        <span class="tag inline-block blue">昆明市</span>
+                </div>
+            </td>
+            <td>502</td>
+            <td>93741</td>
+            <td>食品科学与工程</td>
+                <td>491</td>
+                <td>106749</td>
+            <td>2</td>
+            <td>本科二批</td>
+                <td><a href="/ApplyNationChart/Chart?Year=&Type=l&BZ=b&PiCi=3&SchoolID=646&SchoolName=%e4%ba%91%e5%8d%97%e4%b8%ad%e5%8c%bb%e5%ad%a6%e9%99%a2" target="_blank" class="applyfont chart">&#xe61a;</a></td>
+            <td><a href="javascript:;" class="see plan2017" data-collegeid="646,3,云南中医学院">查看</a></td>
+            <td><a href="javascript:;" class="collect applyfont" data-collect="646,15035,3,2016,b,2203">&#xe612;</a></td>
+        </tr>
+            <tr>
+            <td class="college">
+                <div class="left">
+                        <p class="name"><a href="/Colleges/Introduction?CollegeID=1175" title="江西理工大学" target="_blank">江西理工大学</a></p>
+
+
+
+
+
+
+                        <span class="tag inline-block blue">赣州市</span>
+                </div>
+            </td>
+            <td>498</td>
+            <td>98426</td>
+            <td>工商管理类(中外合作办学)(工商管理)</td>
+                <td>493</td>
+                <td>104424</td>
+            <td>6</td>
+            <td>本科二批</td>
+                <td><a href="/ApplyNationChart/Chart?Year=&Type=l&BZ=b&PiCi=3&SchoolID=313&SchoolName=%e6%b1%9f%e8%a5%bf%e7%90%86%e5%b7%a5%e5%a4%a7%e5%ad%a6" target="_blank" class="applyfont chart">&#xe61a;</a></td>
+            <td><a href="javascript:;" class="see plan2017" data-collegeid="313,3,江西理工大学">查看</a></td>
+            <td><a href="javascript:;" class="collect applyfont" data-collect="313,18847,3,2016,b,1175">&#xe612;</a></td>
+        </tr>
+            <tr>
+            <td class="college">
+                <div class="left">
+                        <p class="name"><a href="/Colleges/Introduction?CollegeID=1175" title="江西理工大学" target="_blank">江西理工大学</a></p>
+
+
+
+
+
+
+                        <span class="tag inline-block blue">赣州市</span>
+                </div>
+            </td>
+            <td>498</td>
+            <td>98426</td>
+            <td>计算机类(中外合作办学)(计算机科学与技术)</td>
+                <td>490</td>
+                <td>107956</td>
+            <td>10</td>
+            <td>本科二批</td>
+                <td><a href="/ApplyNationChart/Chart?Year=&Type=l&BZ=b&PiCi=3&SchoolID=313&SchoolName=%e6%b1%9f%e8%a5%bf%e7%90%86%e5%b7%a5%e5%a4%a7%e5%ad%a6" target="_blank" class="applyfont chart">&#xe61a;</a></td>
+            <td><a href="javascript:;" class="see plan2017" data-collegeid="313,3,江西理工大学">查看</a></td>
+            <td><a href="javascript:;" class="collect applyfont collected"  data-collect="313,35340,3,2016,b,1175">&#xe612;</a></td>
+        </tr>
+            <tr>
+            <td class="college">
+                <div class="left">
+                        <p class="name"><a href="/Colleges/Introduction?CollegeID=1175" title="江西理工大学" target="_blank">江西理工大学</a></p>
+
+
+
+
+
+
+                        <span class="tag inline-block blue">赣州市</span>
+                </div>
+            </td>
+            <td>498</td>
+            <td>98426</td>
+            <td>经济与贸易类(中外合作办学)(国际经济与贸易)</td>
+                <td>488</td>
+                <td>110437</td>
+            <td>6</td>
+            <td>本科二批</td>
+                <td><a href="/ApplyNationChart/Chart?Year=&Type=l&BZ=b&PiCi=3&SchoolID=313&SchoolName=%e6%b1%9f%e8%a5%bf%e7%90%86%e5%b7%a5%e5%a4%a7%e5%ad%a6" target="_blank" class="applyfont chart">&#xe61a;</a></td>
+            <td><a href="javascript:;" class="see plan2017" data-collegeid="313,3,江西理工大学">查看</a></td>
+            <td><a href="javascript:;" class="collect applyfont" data-collect="313,34603,3,2016,b,1175">&#xe612;</a></td>
+        </tr>
+            <tr>
+            <td class="college">
+                <div class="left">
+                        <p class="name"><a href="/Colleges/Introduction?CollegeID=516" title="长春工业大学(中外合作)" target="_blank">长春工业大学(中外合作)</a></p>
+
+
+
+                        <span class="tag inline-block yellow">省属重点本科</span>
+
+
+
+                        <span class="tag inline-block blue">长春市</span>
+                </div>
+            </td>
+            <td>498</td>
+            <td>98426</td>
+            <td>计算机类(中外合作办学)(计算机科学与技术)</td>
+                <td>489</td>
+                <td>109175</td>
+            <td>7</td>
+            <td>本科二批</td>
+                <td><a href="/ApplyNationChart/Chart?Year=&Type=l&BZ=b&PiCi=3&SchoolID=3505&SchoolName=%e9%95%bf%e6%98%a5%e5%b7%a5%e4%b8%9a%e5%a4%a7%e5%ad%a6(%e4%b8%ad%e5%a4%96%e5%90%88%e4%bd%9c)" target="_blank" class="applyfont chart">&#xe61a;</a></td>
+            <td><a href="javascript:;" class="see plan2017" data-collegeid="3505,3,长春工业大学(中外合作)">查看</a></td>
+            <td><a href="javascript:;" class="collect applyfont" data-collect="3505,35340,3,2016,b,516">&#xe612;</a></td>
+        </tr>
+            <tr>
+            <td class="college">
+                <div class="left">
+                        <p class="name"><a href="/Colleges/Introduction?CollegeID=516" title="长春工业大学(中外合作)" target="_blank">长春工业大学(中外合作)</a></p>
+
+
+
+                        <span class="tag inline-block yellow">省属重点本科</span>
+
+
+
+                        <span class="tag inline-block blue">长春市</span>
+                </div>
+            </td>
+            <td>498</td>
+            <td>98426</td>
+            <td>机械类(中外合作办学)(机械工程)</td>
+                <td>487</td>
+                <td>111724</td>
+            <td>7</td>
+            <td>本科二批</td>
+                <td><a href="/ApplyNationChart/Chart?Year=&Type=l&BZ=b&PiCi=3&SchoolID=3505&SchoolName=%e9%95%bf%e6%98%a5%e5%b7%a5%e4%b8%9a%e5%a4%a7%e5%ad%a6(%e4%b8%ad%e5%a4%96%e5%90%88%e4%bd%9c)" target="_blank" class="applyfont chart">&#xe61a;</a></td>
+            <td><a href="javascript:;" class="see plan2017" data-collegeid="3505,3,长春工业大学(中外合作)">查看</a></td>
+            <td><a href="javascript:;" class="collect applyfont" data-collect="3505,35136,3,2016,b,516">&#xe612;</a></td>
+        </tr>
+            <tr>
+            <td class="college">
+                <div class="left">
+                        <p class="name"><a href="/Colleges/Introduction?CollegeID=516" title="长春工业大学(中外合作)" target="_blank">长春工业大学(中外合作)</a></p>
+
+
+
+                        <span class="tag inline-block yellow">省属重点本科</span>
+
+
+
+                        <span class="tag inline-block blue">长春市</span>
+                </div>
+            </td>
+            <td>498</td>
+            <td>98426</td>
+            <td>电气类(中外合作办学)(电气工程及其自动化)</td>
+                <td>496</td>
+                <td>100834</td>
+            <td>7</td>
+            <td>本科二批</td>
+                <td><a href="/ApplyNationChart/Chart?Year=&Type=l&BZ=b&PiCi=3&SchoolID=3505&SchoolName=%e9%95%bf%e6%98%a5%e5%b7%a5%e4%b8%9a%e5%a4%a7%e5%ad%a6(%e4%b8%ad%e5%a4%96%e5%90%88%e4%bd%9c)" target="_blank" class="applyfont chart">&#xe61a;</a></td>
+            <td><a href="javascript:;" class="see plan2017" data-collegeid="3505,3,长春工业大学(中外合作)">查看</a></td>
+            <td><a href="javascript:;" class="collect applyfont" data-collect="3505,35313,3,2016,b,516">&#xe612;</a></td>
+        </tr>
+            <tr>
+            <td class="college">
+                <div class="left">
+                        <p class="name"><a href="/Colleges/Introduction?CollegeID=999" title="合肥学院" target="_blank">合肥学院</a></p>
+
+
+
+
+
+
+                        <span class="tag inline-block blue">合肥市</span>
+                </div>
+            </td>
+            <td>496</td>
+            <td>100834</td>
+            <td>应用心理学</td>
+                <td>496</td>
+                <td>100834</td>
+            <td>2</td>
+            <td>本科二批</td>
+                <td><a href="/ApplyNationChart/Chart?Year=&Type=l&BZ=b&PiCi=3&SchoolID=348&SchoolName=%e5%90%88%e8%82%a5%e5%ad%a6%e9%99%a2" target="_blank" class="applyfont chart">&#xe61a;</a></td>
+            <td><a href="javascript:;" class="see plan2017" data-collegeid="348,3,合肥学院">查看</a></td>
+            <td><a href="javascript:;" class="collect applyfont" data-collect="348,15010,3,2016,b,999">&#xe612;</a></td>
+        </tr>
+            <tr>
+            <td class="college">
+                <div class="left">
+                        <p class="name"><a href="/Colleges/Introduction?CollegeID=996" title="安徽科技学院" target="_blank">安徽科技学院</a></p>
+
+
+
+
+
+
+                        <span class="tag inline-block blue">滁州市</span>
+                </div>
+            </td>
+            <td>496</td>
+            <td>100834</td>
+            <td>材料科学与工程</td>
+                <td>496</td>
+                <td>100834</td>
+            <td>1</td>
+            <td>本科二批</td>
+                <td><a href="/ApplyNationChart/Chart?Year=&Type=l&BZ=b&PiCi=3&SchoolID=525&SchoolName=%e5%ae%89%e5%be%bd%e7%a7%91%e6%8a%80%e5%ad%a6%e9%99%a2" target="_blank" class="applyfont chart">&#xe61a;</a></td>
+            <td><a href="javascript:;" class="see plan2017" data-collegeid="525,3,安徽科技学院">查看</a></td>
+            <td><a href="javascript:;" class="collect applyfont" data-collect="525,14885,3,2016,b,996">&#xe612;</a></td>
+        </tr>
+            <tr>
+            <td class="college">
+                <div class="left">
+                        <p class="name"><a href="/Colleges/Introduction?CollegeID=996" title="安徽科技学院" target="_blank">安徽科技学院</a></p>
+
+
+
+
+
+
+                        <span class="tag inline-block blue">滁州市</span>
+                </div>
+            </td>
+            <td>496</td>
+            <td>100834</td>
+            <td>建筑学(学制5年)</td>
+                <td>496</td>
+                <td>100834</td>
+            <td>1</td>
+            <td>本科二批</td>
+                <td><a href="/ApplyNationChart/Chart?Year=&Type=l&BZ=b&PiCi=3&SchoolID=525&SchoolName=%e5%ae%89%e5%be%bd%e7%a7%91%e6%8a%80%e5%ad%a6%e9%99%a2" target="_blank" class="applyfont chart">&#xe61a;</a></td>
+            <td><a href="javascript:;" class="see plan2017" data-collegeid="525,3,安徽科技学院">查看</a></td>
+            <td><a href="javascript:;" class="collect applyfont" data-collect="525,58887,3,2016,b,996">&#xe612;</a></td>
+        </tr>
+            <tr>
+            <td class="college">
+                <div class="left">
+                        <p class="name"><a href="/Colleges/Introduction?CollegeID=996" title="安徽科技学院" target="_blank">安徽科技学院</a></p>
+
+
+
+
+
+
+                        <span class="tag inline-block blue">滁州市</span>
+                </div>
+            </td>
+            <td>496</td>
+            <td>100834</td>
+            <td>财务管理</td>
+                <td>496</td>
+                <td>100834</td>
+            <td>1</td>
+            <td>本科二批</td>
+                <td><a href="/ApplyNationChart/Chart?Year=&Type=l&BZ=b&PiCi=3&SchoolID=525&SchoolName=%e5%ae%89%e5%be%bd%e7%a7%91%e6%8a%80%e5%ad%a6%e9%99%a2" target="_blank" class="applyfont chart">&#xe61a;</a></td>
+            <td><a href="javascript:;" class="see plan2017" data-collegeid="525,3,安徽科技学院">查看</a></td>
+            <td><a href="javascript:;" class="collect applyfont" data-collect="525,14988,3,2016,b,996">&#xe612;</a></td>
+        </tr>
+            <tr>
+            <td class="college">
+                <div class="left">
+                        <p class="name"><a href="/Colleges/Introduction?CollegeID=1197" title="九江学院" target="_blank">九江学院</a></p>
+
+
+
+
+
+
+                        <span class="tag inline-block blue">九江市</span>
+                </div>
+            </td>
+            <td>495</td>
+            <td>102018</td>
+            <td>给排水科学与工程</td>
+                <td>492</td>
+                <td>105618</td>
+            <td>3</td>
+            <td>本科二批</td>
+                <td><a href="/ApplyNationChart/Chart?Year=&Type=l&BZ=b&PiCi=3&SchoolID=715&SchoolName=%e4%b9%9d%e6%b1%9f%e5%ad%a6%e9%99%a2" target="_blank" class="applyfont chart">&#xe61a;</a></td>
+            <td><a href="javascript:;" class="see plan2017" data-collegeid="715,3,九江学院">查看</a></td>
+            <td><a href="javascript:;" class="collect applyfont" data-collect="715,15056,3,2016,b,1197">&#xe612;</a></td>
+        </tr>
+</table>
+
+    <div class="pagination clearfix">
+        <div class="page"><div style="float:left;">共 1370 条记录 页次：1/77页 18条/页 </div><div style="float:right;"><a href="javascript:void(0)" style="color:#999;" class="W59">首页</a> <a href="javascript:void(0)" style="color:#999" class="W59">上一页</a> <a class="curr cur">1</a> <a href='?year=2016&bz=b&pici=3&querycontent=100000%2c120000&querytype=9&type=1&page=2'>2</a> <a href='?year=2016&bz=b&pici=3&querycontent=100000%2c120000&querytype=9&type=1&page=3'>3</a> <a href='?year=2016&bz=b&pici=3&querycontent=100000%2c120000&querytype=9&type=1&page=4'>4</a> <a href='?year=2016&bz=b&pici=3&querycontent=100000%2c120000&querytype=9&type=1&page=5'>5</a> <a href='?year=2016&bz=b&pici=3&querycontent=100000%2c120000&querytype=9&type=1&page=6'>…</a>  <a href='?year=2016&bz=b&pici=3&querycontent=100000%2c120000&querytype=9&type=1&page=2'  class="W59">下一页</a> <a href='?year=2016&bz=b&pici=3&querycontent=100000%2c120000&querytype=9&type=1&page=77'  class="W59">尾页</a>  </div></div>
+    </div>
+        <p class="collectVolunteerBottom resultInfor">您已初步收藏<span class="orange" id="collectVolunteerBottom">37</span>个志愿，点击这里去查看下<a href="/ApplyNationContrast?type=2" target="_blank">查看</a></p>
+
+<section class="resultNotice mrgT20">
+    <span>特别提醒：</span>
+        
+        <p>1、本系统通过招生考试院公开信息、大学官网和各省教育系统等渠道，收集、整合处理各渠道数据，数据真实、详细、可靠。</p>
+        <p>2、本系统的数据不含艺体类及部分提前批数据，报考以上计划类型的考生请参考省招办或学校官网公布的信息，结合政策和自身条件进行填报。</p>
+        <p>3、由于各省加分政策、院校官网对征集志愿数据的显示等原因，会与院校官网存在不一致的情况，建议以各省考试院发布的数据为准。</p>
+        <p>4、由于高校部分专业录取方向包含中外合作、校企合作、联合办学、农林、护理等特殊类型，分数相较其他录取类型普遍偏低，故这部分专业方向的录取分数低于该院校投档线属于正常现象，望知悉。</p>
+        <p>5、本系统提供的所有数据仅供考生填报志愿时参考使用，考生应考虑到高校招生计划的变化、高考试题的难度变化以及其它偶然因素引起的偏差，所提供的信息不作为填报志愿的绝对依据。</p>
+        
+</section>
+
+
+</div>
+
+
+
+
+
+    <div class="siteFloor" id="siteFloor">
+    
+    
+        <a href="/" class="ui-commonIcon goHome">返回首页</a>
+    <a href="/FAQ" class="ui-commonIcon goHelp">联系客服</a> <a href="/FAQ/CustomerService"
+        class="ui-commonIcon goService">在线咨询</a> <a href="/faq/feedback" class="ui-commonIcon goFeed">
+            我要反馈</a> <a href="javascript:;" class="ui-commonIcon goTop" id="goScrollTop">返回顶部</a>
+</div>
+<!-- siteFloor end -->
+
+    <div class="pushFooter"></div>
+</div><!--wraper end-->
+
+<div class="footer studyFooter">
+    <div class="bottom W1000 clearfix">
+        <p class="copyRight">
+            Copyright &copy; 2017 www.ewt360.com
+            <a href="http://www.ewt360.com/Home/About?id=7">关于网站</a>
+            <a href="http://www.ewt360.com/Home/About?id=9">法律声明</a>
+            <a href="http://www.ewt360.com/Home/About?id=12">联系我们</a>
+            <a href="http://www.ewt360.com/Home/About?id=14">打款信息</a>
+            <a href="http://www.ewt360.com/Faq">联系客服</a>
+            <a href="http://www.ewt360.com/FAQ/Feedback">意见反馈</a>
+            <a href="http://www.miibeian.gov.cn" target="_blank">京ICP备13000880号-1</a>
+            <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=33010502001207" target="_blank"><img src="http://cdn.ewt360.com/ewt360/images/icons/policIcon.png"  alt="" style="vertical-align:middle;">浙公网安备 33010502001207号</a>
+        </p>
+
+    </div>
+    <p style="text-align:center;clear:both;margin-top:25px;">
+        <a id="___szfw_logo___" href="https://credit.szfw.org/CX20160612015637180183.html" target="_blank"><img src="http://icon.szfw.org/cert.png" border="0"   style="height:47px;" /></a>
+        <a href="http://v.pinpaibao.com.cn/authenticate/cert/?site=www.ewt360.com&at=realname" target="_blank"><img src="http://static.ewt360.com/upload/ewt/kecheng/2016/06/07/20160607161404695.png" alt="" class="mrgL10"></a>
+        <a href="https://ss.knet.cn/verifyseal.dll?sn=e17010933010066168tmmc000000&ct=df&a=1&pa=0.5675404737847385" target="_blank"><img src="http://cdn.ewt360.com/ewt360/images/images/cnnic.png" alt="" class="mrgL10 lazy"></a>
+    </p>
+</div><!-- footer end -->
+
+<script type="text/javascript" src="http://cdn.ewt360.com/ewt360/js/studyCommon.min.js?t=20170626"></script>
+
+
+    <script type="text/javascript" src="http://cdn.ewt360.com/ewt360/js/applyquery.min.js?t=20170626"></script>
+
+<div style="display: none">
+    <script type="text/javascript">
+        var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    	document.write(unescape("%3Cscript src='" + _bdhmProtocol + "tongji.ewt360.com/api/getjs?2' type='text/javascript'%3E%3C/script%3E"));
+        document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F9f9b5bffee4cbc2aeda3d2bb3470e2f6' type='text/javascript'%3E%3C/script%3E"));
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create', 'UA-62974058-1', 'auto');ga('send', 'pageview');
+    </script>
+</div>
+</body>
+</html>

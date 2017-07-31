@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html class="login-bg">
+<head>
+	<title>Detail Admin - Sign up</title>
+    
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	
+    <!-- bootstrap -->
+    <link href="/static/css/bootstrap/bootstrap.css" rel="stylesheet" />
+    <link href="/static/css/bootstrap/bootstrap-responsive.css" rel="stylesheet" />
+    <link href="/static/css/bootstrap/bootstrap-overrides.css" type="text/css" rel="stylesheet" />
+
+    <!-- global styles -->
+    <link rel="stylesheet" type="text/css" href="/static/css/layout.css" />
+    <link rel="stylesheet" type="text/css" href="/static/css/elements.css" />
+    <link rel="stylesheet" type="text/css" href="/static/css/icons.css" />
+
+    <!-- libraries -->
+    <link rel="stylesheet" type="text/css" href="/static/css/lib/font-awesome.css" />
+    
+    <!-- this page specific styles -->
+    <link rel="stylesheet" href="/static/css/compiled/signup.css" type="text/css" media="screen" />
+
+    <!-- open sans font -->
+
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head>
+<body>
+    <div class="header">
+        <a href="index.html">
+            <img src="/static/img/logo.png" class="logo" />
+        </a>
+    </div>
+    <div class="row-fluid login-wrapper">
+        <div class="box">
+            <div class="content-wrap">
+                <h6>注册新用户</h6>
+                <form action="" method="post">
+                    <input id="username" class="span12" type="text" placeholder="用户名" name = "username"/>
+{#                    <span id="check_username" style="color: red">检查用户名</span>#}
+                    <span id="check_username" style="color: red"></span>
+                    <input id="password" class="span12" type="password" placeholder="密码" name = "password"/>
+{#                    <span id="check_password" style="color: red">检查密码</span>#}
+                    <span id="check_password" style="color: red"></span>
+                    <input class="span12" type="email" placeholder="邮箱" name = "email"/>
+                    <input class="span12" type="text" placeholder="电话" name = "phone"/>
+                    <input id="submit" type="submit" value="注册">
+                </form>
+
+            </div>
+        </div>
+
+        <div class="span4 already">
+            <p>已经拥有账户?</p>
+            <a href="/users/login/">登陆</a>
+        </div>
+    </div>
+
+	<!-- scripts -->
+    <script src="/static/js/jquery-latest.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+    <script src="/static/js/theme.js"></script>
+    <script>
+        $(
+            function () {
+                var check_username = false;
+                var check_password = false;
+                $("#username").blur(
+                    function () {
+                        var input_username = $("#username").val();
+                        var send_dict = {"username":input_username};
+{#                        alert("username失焦事件")#}
+{#                        alert(JSON.stringify(send_dict));#}
+                        $.ajax(
+                            {
+                                type : "POST",
+                                url : "/users/check_regist_duplicate_user/",
+                                dataType : "json",
+                                data : send_dict,
+                                success : function (data) {
+{#                                    alert(JSON.stringify(data));#}
+                                    if(data["status"] == "error"){
+                                        $("#check_username").text("UserOK");
+                                        check_username = true
+                                    }
+                                    else{
+                                        $("#check_username").text("UserExist");
+                                        check_username = false
+                                    }
+
+                                },
+                                error : function (error) {
+                                    alert("error is here");
+                                    console.log(error)
+
+                                }
+                            }
+                        );
+                    check()
+                    }
+                );
+                $("#password").blur(
+                    function () {
+                        var input_password = $("#password").val();
+                        if(input_password.length < 6){
+                            $("#check_password").text("密码最少6位，请重新输入");
+                            check_password = false
+                        }
+                        else {
+                            $("#check_password").text("");
+                            check_password = true
+                        }
+                    check()
+                    }
+                );
+
+                function check() {
+                    if(check_username == false || check_password == false){
+                        $("#submit").attr("disabled",true);
+                    }
+                    else {
+                        $("#submit").removeAttr("disabled");
+                    }
+
+                };
+            }
+        )
+    </script>
+
+</body>
+</html>
