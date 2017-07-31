@@ -2,6 +2,7 @@
 from __future__ import unicode_literals
 
 from django.shortcuts import render,HttpResponse,HttpResponseRedirect,render_to_response
+from django.core.paginator import Paginator,PageNotAnInteger,EmptyPage
 from django.contrib import auth
 from . import models
 import hashlib
@@ -214,17 +215,44 @@ def server_register(request):
 #查询结果如下，以tuple形式展现
 #servers value: (3L, '192.168.174.144', 22L, 'root', 'c4ca4238a0b923820dcc509a6f75849b', 'SSH', 'N', datetime.datetime(2017, 7, 12, 17, 44, 48))
 #servers type: <type 'tuple'>
+# @valid_login
+# def server_list(request):
+#     session_username = request.session.get('session_username')
+#
+#     servers_sql = "select * from clocmdb_server where id in (select server_id from clocmdb_userserver where user_id = (select id from clocmdb_user where username = '%s'))" % (session_username)
+#     servers = execute_select_all_sql(servers_sql)
+#
+#     print 'servers type: %s' % (type(servers))
+#     print servers
+#     return render(request,'server_list.html',locals())
+
+
+
+#测试分页
 @valid_login
-def server_list(request):
+def server_list(request,pageid):
     session_username = request.session.get('session_username')
 
     servers_sql = "select * from clocmdb_server where id in (select server_id from clocmdb_userserver where user_id = (select id from clocmdb_user where username = '%s'))" % (session_username)
     servers = execute_select_all_sql(servers_sql)
+    if not pageid:
+        pageid = 1
+
+    paginator = Paginator(servers,2)
+    try:
+        servers_view = paginator.page(pageid).object_list
+    except PageNotAnInteger:
+        servers_view = paginator.page(1).object_list
+    except EmptyPage:
+        servers_view = paginator.page(paginator.num_pages).object_list
 
     print 'servers type: %s' % (type(servers))
-    print servers
-    return render(request,'server_list.html',locals())
+    print 'servers data: ',servers
 
+    print 'servers_view type: %s' % (type(servers_view))
+    print 'servers_view data: ' ,servers_view
+
+    return render(request,'server_list.html',locals())
 
 #根据服务器的的server_id，server和serverdetail多表联合查询，获取服务器的具体信息
 @valid_login
@@ -302,13 +330,10 @@ def unixts2nowtime(unixts):
 
 @valid_login
 def server_monitor(request,server_id):
-
     ip = get_ipport_from_server_id(server_id)
-
     zapi = ZabbixAPI(ip)
     keys = zapi.keys
     historyids = zapi.historyids
-
     key_historys_dict = {}
 
     for key in keys:
@@ -317,7 +342,6 @@ def server_monitor(request,server_id):
             historys = zapi.get_historys(itemid, historyid)
             if historys != []:
                 if 'vfs.fs.size' in key or 'swap' in key or 'vm.memory.size[total]' in key:
-                    # if 'vfs.fs.size' in key or 'swap' in key:
                     historys = historys[0:1]
                 else:
                     pass

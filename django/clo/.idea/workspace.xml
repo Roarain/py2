@@ -149,8 +149,8 @@
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/index.html" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/password_forget.html" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/server_detail.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/server_list.html" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/server_list_20170730.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/server_list_20170731.html" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/server_list_on_off.html" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/server_monitor.html" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/server_register.html" />
@@ -172,6 +172,7 @@
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/clo$nginx_config.coverage" NAME="nginx_config Coverage Results" MODIFIED="1500134049053" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/clo$zabbix1.coverage" NAME="zabbix1 Coverage Results" MODIFIED="1501220439555" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/clo$paginatortest.coverage" NAME="paginatortest Coverage Results" MODIFIED="1501492854253" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/clo$sqltest.coverage" NAME="sqltest Coverage Results" MODIFIED="1501436940047" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/clo$manage.coverage" NAME="manage Coverage Results" MODIFIED="1499829795490" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/clo$dbtest.coverage" NAME="dbtest Coverage Results" MODIFIED="1500191795273" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
@@ -198,42 +199,75 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/clocmdb/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="401" column="44" lean-forward="true" selection-start-line="401" selection-start-column="44" selection-end-line="401" selection-end-column="44" />
+            <state relative-caret-position="369">
+              <caret line="255" column="0" lean-forward="true" selection-start-line="255" selection-start-column="0" selection-end-line="255" selection-end-column="0" />
               <folding>
                 <element signature="e#24#63#0" expanded="true" />
-                <element signature="e#3208#4121#0" expanded="false" />
-                <element signature="e#4207#4372#0" expanded="false" />
-                <element signature="e#4428#5096#0" expanded="false" />
-                <element signature="e#5453#8595#0" expanded="false" />
-                <element signature="e#16853#17129#0" expanded="false" />
-                <element signature="e#17222#18692#0" expanded="false" />
-                <element signature="e#18757#19290#0" expanded="false" />
-                <element signature="e#19367#20153#0" expanded="false" />
-                <element signature="e#20204#20401#0" expanded="false" />
-                <element signature="e#20436#20619#0" expanded="false" />
-                <element signature="e#20658#20849#0" expanded="false" />
-                <element signature="e#21391#21574#0" expanded="false" />
-                <element signature="e#21609#21792#0" expanded="false" />
-                <marker date="1501437394664" expanded="true" signature="6180:6195" ph="select id fr... users_server" />
-                <marker date="1501437394664" expanded="true" signature="6180:6225" ph="select id fr... clocmdb_server" />
-                <marker date="1501437394664" expanded="true" signature="6180:6241" ph="select id fr... clocmdb_server" />
-                <marker date="1501437394664" expanded="true" signature="6481:6530" ph="select id fr... clocmdb_user" />
-                <marker date="1501437394664" expanded="true" signature="8955:9106" ph="select * fro... clocmdb_server" />
-                <marker date="1501437394664" expanded="true" signature="8997:9105" ph="select serve... clocmdb_userserver" />
-                <marker date="1501437394664" expanded="true" signature="9055:9104" ph="select id fr... clocmdb_user" />
-                <marker date="1501437394664" expanded="true" signature="9498:9763" ph="select s.ip users_server" />
-                <marker date="1501437394664" expanded="true" signature="9710:9762" ph="select base_... users_server" />
-                <marker date="1501437394664" expanded="true" signature="9797:9841" ph="select s.ip users_server" />
-                <marker date="1501437394664" expanded="true" signature="9797:9920" ph="select s.ip users_server" />
-                <marker date="1501437394664" expanded="true" signature="9797:9975" ph="select s.ip clocmdb_server" />
-                <marker date="1501437394664" expanded="true" signature="9797:10013" ph="select s.ip clocmdb_server" />
-                <marker date="1501437394664" expanded="true" signature="10301:10418" ph="select s.ip clocmdb_server" />
-                <marker date="1501437394664" expanded="true" signature="10809:10926" ph="select s.ip clocmdb_server" />
-                <marker date="1501437394664" expanded="true" signature="12121:12238" ph="select s.ip clocmdb_server" />
-                <marker date="1501437394664" expanded="true" signature="15890:16019" ph="select h.hos... hosts" />
-                <marker date="1501437394664" expanded="true" signature="15890:16098" ph="select h.hos... hosts" />
+                <element signature="e#3279#4192#0" expanded="false" />
+                <element signature="e#4278#4443#0" expanded="false" />
+                <element signature="e#4499#5167#0" expanded="false" />
+                <element signature="e#5524#8666#0" expanded="false" />
+                <element signature="e#17797#18073#0" expanded="false" />
+                <element signature="e#18166#19636#0" expanded="false" />
+                <element signature="e#19701#20234#0" expanded="false" />
+                <element signature="e#20311#21097#0" expanded="false" />
+                <element signature="e#21148#21345#0" expanded="false" />
+                <element signature="e#21380#21563#0" expanded="false" />
+                <element signature="e#21602#21793#0" expanded="false" />
+                <element signature="e#22335#22518#0" expanded="false" />
+                <element signature="e#22553#22736#0" expanded="false" />
+                <marker date="1501492914773" expanded="true" signature="6251:6266" ph="select id fr... users_server" />
+                <marker date="1501492914773" expanded="true" signature="6251:6296" ph="select id fr... clocmdb_server" />
+                <marker date="1501492914773" expanded="true" signature="6251:6312" ph="select id fr... clocmdb_server" />
+                <marker date="1501492914773" expanded="true" signature="6552:6601" ph="select id fr... clocmdb_user" />
+                <marker date="1501492914773" expanded="true" signature="9035:9186" ph="select * fro... clocmdb_server" />
+                <marker date="1501492914773" expanded="true" signature="9077:9185" ph="select serve... clocmdb_userserver" />
+                <marker date="1501492914773" expanded="true" signature="9135:9184" ph="select id fr... clocmdb_user" />
+                <marker date="1501492914773" expanded="true" signature="9527:9678" ph="select * fro... clocmdb_server" />
+                <marker date="1501492914773" expanded="true" signature="9569:9677" ph="select serve... clocmdb_userserver" />
+                <marker date="1501492914773" expanded="true" signature="9627:9676" ph="select id fr... clocmdb_user" />
+                <marker date="1501492914773" expanded="true" signature="10509:10774" ph="select s.ip users_server" />
+                <marker date="1501492914773" expanded="true" signature="10721:10773" ph="select base_... users_server" />
+                <marker date="1501492914773" expanded="true" signature="10808:10852" ph="select s.ip users_server" />
+                <marker date="1501492914773" expanded="true" signature="10808:10931" ph="select s.ip users_server" />
+                <marker date="1501492914773" expanded="true" signature="10808:10986" ph="select s.ip clocmdb_server" />
+                <marker date="1501492914773" expanded="true" signature="10808:11024" ph="select s.ip clocmdb_server" />
+                <marker date="1501492914773" expanded="true" signature="11312:11429" ph="select s.ip clocmdb_server" />
+                <marker date="1501492914773" expanded="true" signature="11820:11937" ph="select s.ip clocmdb_server" />
+                <marker date="1501492914773" expanded="true" signature="13132:13249" ph="select s.ip clocmdb_server" />
+                <marker date="1501492914773" expanded="true" signature="16834:16963" ph="select h.hos... hosts" />
+                <marker date="1501492914773" expanded="true" signature="16834:17042" ph="select h.hos... hosts" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="server_list.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/server_list.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="320" column="64" lean-forward="false" selection-start-line="320" selection-start-column="64" selection-end-line="320" selection-end-column="64" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/clocmdb/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="311">
+              <caret line="34" column="49" lean-forward="false" selection-start-line="34" selection-start-column="49" selection-end-line="34" selection-end-column="49" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="paginatortest.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/paginatortest.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="76">
+              <caret line="4" column="12" lean-forward="false" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -250,8 +284,8 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="server_list.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/server_list.html">
+      <file leaf-file-name="server_list_20170731.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/server_list_20170731.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="6821">
               <caret line="359" column="93" lean-forward="false" selection-start-line="359" selection-start-column="93" selection-end-line="359" selection-end-column="93" />
@@ -314,10 +348,12 @@
         <option value="$PROJECT_DIR$/zabbix1.py" />
         <option value="$PROJECT_DIR$/get_history_datas_api.py" />
         <option value="$PROJECT_DIR$/templates/server_monitor.html" />
-        <option value="$PROJECT_DIR$/clocmdb/urls.py" />
         <option value="$PROJECT_DIR$/sqltest.py" />
         <option value="$PROJECT_DIR$/templates/server_list.html" />
         <option value="$PROJECT_DIR$/zabbixlogin.py" />
+        <option value="$PROJECT_DIR$/templates/server_list_paginator.html" />
+        <option value="$PROJECT_DIR$/clocmdb/urls.py" />
+        <option value="$PROJECT_DIR$/paginatortest.py" />
         <option value="$PROJECT_DIR$/clocmdb/views.py" />
       </list>
     </option>
@@ -334,7 +370,9 @@
     <option name="width" value="1922" />
     <option name="height" value="1019" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
@@ -409,25 +447,7 @@
       <recent name="$PROJECT_DIR$/clocmdb" />
     </key>
   </component>
-  <component name="RunManager" selected="Django server.clo">
-    <configuration default="false" name="zabbixtest" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="clo" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/zabbixtest.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Python.paginatortest">
     <configuration default="false" name="zabbix1" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -496,6 +516,24 @@
       <module name="clo" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/sqltest.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="paginatortest" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="clo" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/paginatortest.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -763,19 +801,19 @@
     </configuration>
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Django server.clo" />
-      <item index="1" class="java.lang.String" itemvalue="Python.zabbixtest" />
-      <item index="2" class="java.lang.String" itemvalue="Python.zabbix1" />
-      <item index="3" class="java.lang.String" itemvalue="Python.zabbixlogin" />
-      <item index="4" class="java.lang.String" itemvalue="Python.views" />
-      <item index="5" class="java.lang.String" itemvalue="Python.sqltest" />
+      <item index="1" class="java.lang.String" itemvalue="Python.zabbix1" />
+      <item index="2" class="java.lang.String" itemvalue="Python.zabbixlogin" />
+      <item index="3" class="java.lang.String" itemvalue="Python.views" />
+      <item index="4" class="java.lang.String" itemvalue="Python.sqltest" />
+      <item index="5" class="java.lang.String" itemvalue="Python.paginatortest" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.zabbixlogin" />
-        <item index="1" class="java.lang.String" itemvalue="Python.views" />
-        <item index="2" class="java.lang.String" itemvalue="Python.sqltest" />
-        <item index="3" class="java.lang.String" itemvalue="Python.zabbix1" />
-        <item index="4" class="java.lang.String" itemvalue="Python.zabbixtest" />
+        <item index="0" class="java.lang.String" itemvalue="Python.paginatortest" />
+        <item index="1" class="java.lang.String" itemvalue="Python.zabbixlogin" />
+        <item index="2" class="java.lang.String" itemvalue="Python.views" />
+        <item index="3" class="java.lang.String" itemvalue="Python.sqltest" />
+        <item index="4" class="java.lang.String" itemvalue="Python.zabbix1" />
       </list>
     </recent_temporary>
   </component>
@@ -799,26 +837,26 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="28" width="1922" height="1019" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26256683" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26256683" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3306544" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.41102183" sideWeight="0.50213903" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32990867" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.41102183" sideWeight="0.49786097" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39954337" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.41210046" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39954337" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -834,20 +872,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/dbtest.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="19" column="8" lean-forward="false" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sstest.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="36" column="23" lean-forward="false" selection-start-line="36" selection-start-column="23" selection-end-line="36" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///usr/local/lib/python2.7/socket.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
@@ -1166,14 +1190,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/clocmdb/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="37" column="25" lean-forward="false" selection-start-line="37" selection-start-column="11" selection-end-line="37" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/server_list.html">
+    <entry file="file://$PROJECT_DIR$/templates/server_list_20170731.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="6821">
           <caret line="359" column="93" lean-forward="false" selection-start-line="359" selection-start-column="93" selection-end-line="359" selection-end-column="93" />
@@ -1191,43 +1208,70 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/templates/server_list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="320" column="64" lean-forward="false" selection-start-line="320" selection-start-column="64" selection-end-line="320" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/clocmdb/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="311">
+          <caret line="34" column="49" lean-forward="false" selection-start-line="34" selection-start-column="49" selection-end-line="34" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/paginatortest.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="12" lean-forward="false" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/clocmdb/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="401" column="44" lean-forward="true" selection-start-line="401" selection-start-column="44" selection-end-line="401" selection-end-column="44" />
+        <state relative-caret-position="369">
+          <caret line="255" column="0" lean-forward="true" selection-start-line="255" selection-start-column="0" selection-end-line="255" selection-end-column="0" />
           <folding>
             <element signature="e#24#63#0" expanded="true" />
-            <element signature="e#3208#4121#0" expanded="false" />
-            <element signature="e#4207#4372#0" expanded="false" />
-            <element signature="e#4428#5096#0" expanded="false" />
-            <element signature="e#5453#8595#0" expanded="false" />
-            <element signature="e#16853#17129#0" expanded="false" />
-            <element signature="e#17222#18692#0" expanded="false" />
-            <element signature="e#18757#19290#0" expanded="false" />
-            <element signature="e#19367#20153#0" expanded="false" />
-            <element signature="e#20204#20401#0" expanded="false" />
-            <element signature="e#20436#20619#0" expanded="false" />
-            <element signature="e#20658#20849#0" expanded="false" />
-            <element signature="e#21391#21574#0" expanded="false" />
-            <element signature="e#21609#21792#0" expanded="false" />
-            <marker date="1501437394664" expanded="true" signature="6180:6195" ph="select id fr... users_server" />
-            <marker date="1501437394664" expanded="true" signature="6180:6225" ph="select id fr... clocmdb_server" />
-            <marker date="1501437394664" expanded="true" signature="6180:6241" ph="select id fr... clocmdb_server" />
-            <marker date="1501437394664" expanded="true" signature="6481:6530" ph="select id fr... clocmdb_user" />
-            <marker date="1501437394664" expanded="true" signature="8955:9106" ph="select * fro... clocmdb_server" />
-            <marker date="1501437394664" expanded="true" signature="8997:9105" ph="select serve... clocmdb_userserver" />
-            <marker date="1501437394664" expanded="true" signature="9055:9104" ph="select id fr... clocmdb_user" />
-            <marker date="1501437394664" expanded="true" signature="9498:9763" ph="select s.ip users_server" />
-            <marker date="1501437394664" expanded="true" signature="9710:9762" ph="select base_... users_server" />
-            <marker date="1501437394664" expanded="true" signature="9797:9841" ph="select s.ip users_server" />
-            <marker date="1501437394664" expanded="true" signature="9797:9920" ph="select s.ip users_server" />
-            <marker date="1501437394664" expanded="true" signature="9797:9975" ph="select s.ip clocmdb_server" />
-            <marker date="1501437394664" expanded="true" signature="9797:10013" ph="select s.ip clocmdb_server" />
-            <marker date="1501437394664" expanded="true" signature="10301:10418" ph="select s.ip clocmdb_server" />
-            <marker date="1501437394664" expanded="true" signature="10809:10926" ph="select s.ip clocmdb_server" />
-            <marker date="1501437394664" expanded="true" signature="12121:12238" ph="select s.ip clocmdb_server" />
-            <marker date="1501437394664" expanded="true" signature="15890:16019" ph="select h.hos... hosts" />
-            <marker date="1501437394664" expanded="true" signature="15890:16098" ph="select h.hos... hosts" />
+            <element signature="e#3279#4192#0" expanded="false" />
+            <element signature="e#4278#4443#0" expanded="false" />
+            <element signature="e#4499#5167#0" expanded="false" />
+            <element signature="e#5524#8666#0" expanded="false" />
+            <element signature="e#17797#18073#0" expanded="false" />
+            <element signature="e#18166#19636#0" expanded="false" />
+            <element signature="e#19701#20234#0" expanded="false" />
+            <element signature="e#20311#21097#0" expanded="false" />
+            <element signature="e#21148#21345#0" expanded="false" />
+            <element signature="e#21380#21563#0" expanded="false" />
+            <element signature="e#21602#21793#0" expanded="false" />
+            <element signature="e#22335#22518#0" expanded="false" />
+            <element signature="e#22553#22736#0" expanded="false" />
+            <marker date="1501492914773" expanded="true" signature="6251:6266" ph="select id fr... users_server" />
+            <marker date="1501492914773" expanded="true" signature="6251:6296" ph="select id fr... clocmdb_server" />
+            <marker date="1501492914773" expanded="true" signature="6251:6312" ph="select id fr... clocmdb_server" />
+            <marker date="1501492914773" expanded="true" signature="6552:6601" ph="select id fr... clocmdb_user" />
+            <marker date="1501492914773" expanded="true" signature="9035:9186" ph="select * fro... clocmdb_server" />
+            <marker date="1501492914773" expanded="true" signature="9077:9185" ph="select serve... clocmdb_userserver" />
+            <marker date="1501492914773" expanded="true" signature="9135:9184" ph="select id fr... clocmdb_user" />
+            <marker date="1501492914773" expanded="true" signature="9527:9678" ph="select * fro... clocmdb_server" />
+            <marker date="1501492914773" expanded="true" signature="9569:9677" ph="select serve... clocmdb_userserver" />
+            <marker date="1501492914773" expanded="true" signature="9627:9676" ph="select id fr... clocmdb_user" />
+            <marker date="1501492914773" expanded="true" signature="10509:10774" ph="select s.ip users_server" />
+            <marker date="1501492914773" expanded="true" signature="10721:10773" ph="select base_... users_server" />
+            <marker date="1501492914773" expanded="true" signature="10808:10852" ph="select s.ip users_server" />
+            <marker date="1501492914773" expanded="true" signature="10808:10931" ph="select s.ip users_server" />
+            <marker date="1501492914773" expanded="true" signature="10808:10986" ph="select s.ip clocmdb_server" />
+            <marker date="1501492914773" expanded="true" signature="10808:11024" ph="select s.ip clocmdb_server" />
+            <marker date="1501492914773" expanded="true" signature="11312:11429" ph="select s.ip clocmdb_server" />
+            <marker date="1501492914773" expanded="true" signature="11820:11937" ph="select s.ip clocmdb_server" />
+            <marker date="1501492914773" expanded="true" signature="13132:13249" ph="select s.ip clocmdb_server" />
+            <marker date="1501492914773" expanded="true" signature="16834:16963" ph="select h.hos... hosts" />
+            <marker date="1501492914773" expanded="true" signature="16834:17042" ph="select h.hos... hosts" />
           </folding>
         </state>
       </provider>
