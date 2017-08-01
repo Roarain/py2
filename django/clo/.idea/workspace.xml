@@ -196,11 +196,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/clocmdb/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="546">
-              <caret line="600" column="24" lean-forward="true" selection-start-line="600" selection-start-column="24" selection-end-line="600" selection-end-column="24" />
+            <state relative-caret-position="318">
+              <caret line="647" column="40" lean-forward="true" selection-start-line="647" selection-start-column="40" selection-end-line="647" selection-end-column="40" />
               <folding>
                 <element signature="e#24#63#0" expanded="true" />
                 <element signature="e#3279#4192#0" expanded="false" />
@@ -216,40 +216,40 @@
                 <element signature="e#22606#22797#0" expanded="false" />
                 <element signature="e#23339#23522#0" expanded="false" />
                 <element signature="e#23557#23740#0" expanded="false" />
-                <marker date="1501578024686" expanded="true" signature="6251:6266" ph="select id fr... users_server" />
-                <marker date="1501578024686" expanded="true" signature="6251:6296" ph="select id fr... clocmdb_server" />
-                <marker date="1501578024686" expanded="true" signature="6251:6312" ph="select id fr... clocmdb_server" />
-                <marker date="1501578024686" expanded="true" signature="6552:6601" ph="select id fr... clocmdb_user" />
-                <marker date="1501578024686" expanded="true" signature="9026:9177" ph="select * fro... clocmdb_server" />
-                <marker date="1501578024686" expanded="true" signature="9068:9176" ph="select serve... clocmdb_userserver" />
-                <marker date="1501578024686" expanded="true" signature="9126:9175" ph="select id fr... clocmdb_user" />
-                <marker date="1501578024686" expanded="true" signature="9518:9669" ph="select * fro... clocmdb_server" />
-                <marker date="1501578024686" expanded="true" signature="9560:9668" ph="select serve... clocmdb_userserver" />
-                <marker date="1501578024686" expanded="true" signature="9618:9667" ph="select id fr... clocmdb_user" />
-                <marker date="1501578024686" expanded="true" signature="10496:10647" ph="select * fro... clocmdb_server" />
-                <marker date="1501578024686" expanded="true" signature="10538:10646" ph="select serve... clocmdb_userserver" />
-                <marker date="1501578024686" expanded="true" signature="10596:10645" ph="select id fr... clocmdb_user" />
-                <marker date="1501578024686" expanded="true" signature="11513:11778" ph="select s.ip users_server" />
-                <marker date="1501578024686" expanded="true" signature="11725:11777" ph="select base_... users_server" />
-                <marker date="1501578024686" expanded="true" signature="11812:11856" ph="select s.ip users_server" />
-                <marker date="1501578024686" expanded="true" signature="11812:11935" ph="select s.ip users_server" />
-                <marker date="1501578024686" expanded="true" signature="11812:11990" ph="select s.ip clocmdb_server" />
-                <marker date="1501578024686" expanded="true" signature="11812:12028" ph="select s.ip clocmdb_server" />
-                <marker date="1501578024686" expanded="true" signature="12316:12433" ph="select s.ip clocmdb_server" />
-                <marker date="1501578024686" expanded="true" signature="12824:12941" ph="select s.ip clocmdb_server" />
-                <marker date="1501578024686" expanded="true" signature="14136:14253" ph="select s.ip clocmdb_server" />
-                <marker date="1501578024686" expanded="true" signature="17838:17967" ph="select h.hos... hosts" />
-                <marker date="1501578024686" expanded="true" signature="17838:18046" ph="select h.hos... hosts" />
+                <marker date="1501579473314" expanded="true" signature="6251:6266" ph="select id fr... users_server" />
+                <marker date="1501579473314" expanded="true" signature="6251:6296" ph="select id fr... clocmdb_server" />
+                <marker date="1501579473314" expanded="true" signature="6251:6312" ph="select id fr... clocmdb_server" />
+                <marker date="1501579473314" expanded="true" signature="6552:6601" ph="select id fr... clocmdb_user" />
+                <marker date="1501579473314" expanded="true" signature="9026:9177" ph="select * fro... clocmdb_server" />
+                <marker date="1501579473314" expanded="true" signature="9068:9176" ph="select serve... clocmdb_userserver" />
+                <marker date="1501579473314" expanded="true" signature="9126:9175" ph="select id fr... clocmdb_user" />
+                <marker date="1501579473314" expanded="true" signature="9518:9669" ph="select * fro... clocmdb_server" />
+                <marker date="1501579473314" expanded="true" signature="9560:9668" ph="select serve... clocmdb_userserver" />
+                <marker date="1501579473314" expanded="true" signature="9618:9667" ph="select id fr... clocmdb_user" />
+                <marker date="1501579473314" expanded="true" signature="10496:10647" ph="select * fro... clocmdb_server" />
+                <marker date="1501579473314" expanded="true" signature="10538:10646" ph="select serve... clocmdb_userserver" />
+                <marker date="1501579473314" expanded="true" signature="10596:10645" ph="select id fr... clocmdb_user" />
+                <marker date="1501579473314" expanded="true" signature="11513:11778" ph="select s.ip users_server" />
+                <marker date="1501579473314" expanded="true" signature="11725:11777" ph="select base_... users_server" />
+                <marker date="1501579473314" expanded="true" signature="11812:11856" ph="select s.ip users_server" />
+                <marker date="1501579473314" expanded="true" signature="11812:11935" ph="select s.ip users_server" />
+                <marker date="1501579473314" expanded="true" signature="11812:11990" ph="select s.ip clocmdb_server" />
+                <marker date="1501579473314" expanded="true" signature="11812:12028" ph="select s.ip clocmdb_server" />
+                <marker date="1501579473314" expanded="true" signature="12316:12433" ph="select s.ip clocmdb_server" />
+                <marker date="1501579473314" expanded="true" signature="12824:12941" ph="select s.ip clocmdb_server" />
+                <marker date="1501579473314" expanded="true" signature="14136:14253" ph="select s.ip clocmdb_server" />
+                <marker date="1501579473314" expanded="true" signature="17838:17967" ph="select h.hos... hosts" />
+                <marker date="1501579473314" expanded="true" signature="17838:18046" ph="select h.hos... hosts" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="urls.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/clocmdb/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="444">
-              <caret line="42" column="0" lean-forward="true" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+            <state relative-caret-position="83">
+              <caret line="23" column="33" lean-forward="true" selection-start-line="23" selection-start-column="33" selection-end-line="23" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -258,7 +258,7 @@
       <file leaf-file-name="name_list.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/name_list.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="433">
+            <state relative-caret-position="851">
               <caret line="51" column="7" lean-forward="true" selection-start-line="51" selection-start-column="7" selection-end-line="51" selection-end-column="7" />
               <folding>
                 <element signature="n#style#0;n#button#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -1251,9 +1251,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/clocmdb/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="83">
+          <caret line="23" column="33" lean-forward="true" selection-start-line="23" selection-start-column="33" selection-end-line="23" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/templates/name_list.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="433">
+        <state relative-caret-position="851">
           <caret line="51" column="7" lean-forward="true" selection-start-line="51" selection-start-column="7" selection-end-line="51" selection-end-column="7" />
           <folding>
             <element signature="n#style#0;n#button#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -1264,8 +1272,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/clocmdb/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="546">
-          <caret line="600" column="24" lean-forward="true" selection-start-line="600" selection-start-column="24" selection-end-line="600" selection-end-column="24" />
+        <state relative-caret-position="318">
+          <caret line="647" column="40" lean-forward="true" selection-start-line="647" selection-start-column="40" selection-end-line="647" selection-end-column="40" />
           <folding>
             <element signature="e#24#63#0" expanded="true" />
             <element signature="e#3279#4192#0" expanded="false" />
@@ -1281,39 +1289,31 @@
             <element signature="e#22606#22797#0" expanded="false" />
             <element signature="e#23339#23522#0" expanded="false" />
             <element signature="e#23557#23740#0" expanded="false" />
-            <marker date="1501578024686" expanded="true" signature="6251:6266" ph="select id fr... users_server" />
-            <marker date="1501578024686" expanded="true" signature="6251:6296" ph="select id fr... clocmdb_server" />
-            <marker date="1501578024686" expanded="true" signature="6251:6312" ph="select id fr... clocmdb_server" />
-            <marker date="1501578024686" expanded="true" signature="6552:6601" ph="select id fr... clocmdb_user" />
-            <marker date="1501578024686" expanded="true" signature="9026:9177" ph="select * fro... clocmdb_server" />
-            <marker date="1501578024686" expanded="true" signature="9068:9176" ph="select serve... clocmdb_userserver" />
-            <marker date="1501578024686" expanded="true" signature="9126:9175" ph="select id fr... clocmdb_user" />
-            <marker date="1501578024686" expanded="true" signature="9518:9669" ph="select * fro... clocmdb_server" />
-            <marker date="1501578024686" expanded="true" signature="9560:9668" ph="select serve... clocmdb_userserver" />
-            <marker date="1501578024686" expanded="true" signature="9618:9667" ph="select id fr... clocmdb_user" />
-            <marker date="1501578024686" expanded="true" signature="10496:10647" ph="select * fro... clocmdb_server" />
-            <marker date="1501578024686" expanded="true" signature="10538:10646" ph="select serve... clocmdb_userserver" />
-            <marker date="1501578024686" expanded="true" signature="10596:10645" ph="select id fr... clocmdb_user" />
-            <marker date="1501578024686" expanded="true" signature="11513:11778" ph="select s.ip users_server" />
-            <marker date="1501578024686" expanded="true" signature="11725:11777" ph="select base_... users_server" />
-            <marker date="1501578024686" expanded="true" signature="11812:11856" ph="select s.ip users_server" />
-            <marker date="1501578024686" expanded="true" signature="11812:11935" ph="select s.ip users_server" />
-            <marker date="1501578024686" expanded="true" signature="11812:11990" ph="select s.ip clocmdb_server" />
-            <marker date="1501578024686" expanded="true" signature="11812:12028" ph="select s.ip clocmdb_server" />
-            <marker date="1501578024686" expanded="true" signature="12316:12433" ph="select s.ip clocmdb_server" />
-            <marker date="1501578024686" expanded="true" signature="12824:12941" ph="select s.ip clocmdb_server" />
-            <marker date="1501578024686" expanded="true" signature="14136:14253" ph="select s.ip clocmdb_server" />
-            <marker date="1501578024686" expanded="true" signature="17838:17967" ph="select h.hos... hosts" />
-            <marker date="1501578024686" expanded="true" signature="17838:18046" ph="select h.hos... hosts" />
+            <marker date="1501579473314" expanded="true" signature="6251:6266" ph="select id fr... users_server" />
+            <marker date="1501579473314" expanded="true" signature="6251:6296" ph="select id fr... clocmdb_server" />
+            <marker date="1501579473314" expanded="true" signature="6251:6312" ph="select id fr... clocmdb_server" />
+            <marker date="1501579473314" expanded="true" signature="6552:6601" ph="select id fr... clocmdb_user" />
+            <marker date="1501579473314" expanded="true" signature="9026:9177" ph="select * fro... clocmdb_server" />
+            <marker date="1501579473314" expanded="true" signature="9068:9176" ph="select serve... clocmdb_userserver" />
+            <marker date="1501579473314" expanded="true" signature="9126:9175" ph="select id fr... clocmdb_user" />
+            <marker date="1501579473314" expanded="true" signature="9518:9669" ph="select * fro... clocmdb_server" />
+            <marker date="1501579473314" expanded="true" signature="9560:9668" ph="select serve... clocmdb_userserver" />
+            <marker date="1501579473314" expanded="true" signature="9618:9667" ph="select id fr... clocmdb_user" />
+            <marker date="1501579473314" expanded="true" signature="10496:10647" ph="select * fro... clocmdb_server" />
+            <marker date="1501579473314" expanded="true" signature="10538:10646" ph="select serve... clocmdb_userserver" />
+            <marker date="1501579473314" expanded="true" signature="10596:10645" ph="select id fr... clocmdb_user" />
+            <marker date="1501579473314" expanded="true" signature="11513:11778" ph="select s.ip users_server" />
+            <marker date="1501579473314" expanded="true" signature="11725:11777" ph="select base_... users_server" />
+            <marker date="1501579473314" expanded="true" signature="11812:11856" ph="select s.ip users_server" />
+            <marker date="1501579473314" expanded="true" signature="11812:11935" ph="select s.ip users_server" />
+            <marker date="1501579473314" expanded="true" signature="11812:11990" ph="select s.ip clocmdb_server" />
+            <marker date="1501579473314" expanded="true" signature="11812:12028" ph="select s.ip clocmdb_server" />
+            <marker date="1501579473314" expanded="true" signature="12316:12433" ph="select s.ip clocmdb_server" />
+            <marker date="1501579473314" expanded="true" signature="12824:12941" ph="select s.ip clocmdb_server" />
+            <marker date="1501579473314" expanded="true" signature="14136:14253" ph="select s.ip clocmdb_server" />
+            <marker date="1501579473314" expanded="true" signature="17838:17967" ph="select h.hos... hosts" />
+            <marker date="1501579473314" expanded="true" signature="17838:18046" ph="select h.hos... hosts" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/clocmdb/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="444">
-          <caret line="42" column="0" lean-forward="true" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>

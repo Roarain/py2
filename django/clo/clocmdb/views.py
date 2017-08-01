@@ -581,33 +581,37 @@ def execute_update_sql(sql):
 
 
 def name_list(request):
+    #设置每页显示的数量
     per_page_num = 10
     '''
+    每页显示的具体数据ID
     1       (0,10)
     2       (10,20)
     3       (20,30)
     [(n-1)*10,n*10]
     '''
+    #获取所有数据
     all_ids_names = models.IdName.objects.all()
+    #计算所有数据量
     all_nums = len(all_ids_names)
-
+    #若get请求中没有page参数，则到第一页，若有page参数，则到相应页数
     if not request.GET.get('page'):
         current_page = 1
     elif request.GET.get('page'):
         current_page = int(request.GET.get('page'))
-
+    #若数据总数能整除页数，则一共有总数/每页数据，最后一页为最后per_page_num的数量。若不能整除，则一共有（总数/每页数据+1）页，最后一页显示最后求模剩余的数据
     if all_nums % per_page_num == 0:
         all_pages = all_nums / per_page_num
         last_num = per_page_num
     elif all_nums % per_page_num > 0:
         all_pages = all_nums // per_page_num + 1
         last_num = all_nums % per_page_num
-
+    #此处判断传递过来的current_page范围，若超过最大页数，则返回到第一页
     if current_page > all_pages:
         current_page = 1
         url = 'http://192.168.174.144:9000/clocmdb/name_list/?page=1'
         return HttpResponseRedirect(url)
-
+    #前一页是当前页数-1，后一页是当前页数+1。若当前current_page为第一页，上一页为最后一页。若为最后一页，则下一页是首页。
     pre_page = current_page - 1
     next_page = current_page + 1
 
@@ -615,12 +619,12 @@ def name_list(request):
         pre_page = all_pages
     elif current_page >= all_pages:
         next_page = 1
-
+    #根据每页数据量，[(n-1)*10：n*10]
     start_num = (current_page - 1) * per_page_num
     end_num = current_page * per_page_num
 
     ids_names = models.IdName.objects.all()[start_num:end_num]
-
+    #若start_num多于总数（数据量较小），则显示全部。若end_num多于总数，则在最后一页，显示求模后的几条数据。其余的正常显示
     if start_num >= all_nums:
         ids_names = models.IdName.objects.all()
     elif end_num >= all_nums:
@@ -630,9 +634,12 @@ def name_list(request):
 
     return render(request,'name_list.html',locals())
 
+
+#前台有post请求，跳转页数。传递要跳转到第N页
 def name_list_go(request):
     if request.method == 'POST' and request.POST:
         topagenum = request.POST.get('topagenum')
+        #若未输入跳转页数，点击GO，则到第一页。若输入了，则到相应页数。同时方法name_list也会判断是否超过最大页数。
         if topagenum == '':
             url = 'http://192.168.174.144:9000/clocmdb/name_list/'
         elif topagenum:
