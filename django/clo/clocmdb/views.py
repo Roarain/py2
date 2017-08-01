@@ -215,44 +215,73 @@ def server_register(request):
 #查询结果如下，以tuple形式展现
 #servers value: (3L, '192.168.174.144', 22L, 'root', 'c4ca4238a0b923820dcc509a6f75849b', 'SSH', 'N', datetime.datetime(2017, 7, 12, 17, 44, 48))
 #servers type: <type 'tuple'>
-# @valid_login
-# def server_list(request):
-#     session_username = request.session.get('session_username')
-#
-#     servers_sql = "select * from clocmdb_server where id in (select server_id from clocmdb_userserver where user_id = (select id from clocmdb_user where username = '%s'))" % (session_username)
-#     servers = execute_select_all_sql(servers_sql)
-#
-#     print 'servers type: %s' % (type(servers))
-#     print servers
-#     return render(request,'server_list.html',locals())
-
-
-
-#测试分页
 @valid_login
-def server_list(request,pageid):
+def server_list(request):
     session_username = request.session.get('session_username')
 
     servers_sql = "select * from clocmdb_server where id in (select server_id from clocmdb_userserver where user_id = (select id from clocmdb_user where username = '%s'))" % (session_username)
     servers = execute_select_all_sql(servers_sql)
-    if not pageid:
-        pageid = 1
-
-    paginator = Paginator(servers,2)
-    try:
-        servers_view = paginator.page(pageid).object_list
-    except PageNotAnInteger:
-        servers_view = paginator.page(1).object_list
-    except EmptyPage:
-        servers_view = paginator.page(paginator.num_pages).object_list
 
     print 'servers type: %s' % (type(servers))
-    print 'servers data: ',servers
-
-    print 'servers_view type: %s' % (type(servers_view))
-    print 'servers_view data: ' ,servers_view
-
+    print servers
     return render(request,'server_list.html',locals())
+
+
+
+#测试分页
+# @valid_login
+# def server_list(request,pageid):
+#     session_username = request.session.get('session_username')
+#
+#     servers_sql = "select * from clocmdb_server where id in (select server_id from clocmdb_userserver where user_id = (select id from clocmdb_user where username = '%s'))" % (session_username)
+#     servers = execute_select_all_sql(servers_sql)
+#     if not pageid:
+#         pageid = 1
+#
+#     paginator = Paginator(servers,2)
+#     try:
+#         servers_view = paginator.page(pageid).object_list
+#     except PageNotAnInteger:
+#         servers_view = paginator.page(1).object_list
+#     except EmptyPage:
+#         servers_view = paginator.page(paginator.num_pages).object_list
+#
+#     print 'servers type: %s' % (type(servers))
+#     print 'servers data: ',servers
+#
+#     print 'servers_view type: %s' % (type(servers_view))
+#     print 'servers_view data: ' ,servers_view
+#
+#     return render(request,'server_list.html',locals())
+
+#django测试分页pagination
+# @valid_login
+# def ajax_page(request,pageid):
+#     session_username = request.session.get('session_username')
+#
+#     servers_sql = "select * from clocmdb_server where id in (select server_id from clocmdb_userserver where user_id = (select id from clocmdb_user where username = '%s'))" % (session_username)
+#     servers = execute_select_all_sql(servers_sql)
+#     if not pageid:
+#         pageid = 1
+#
+#     paginator = Paginator(servers,2)
+#     try:
+#         servers_view = paginator.page(pageid).object_list
+#     except PageNotAnInteger:
+#         servers_view = paginator.page(1).object_list
+#     except EmptyPage:
+#         servers_view = paginator.page(paginator.num_pages).object_list
+#
+#     print 'servers type: %s' % (type(servers))
+#     print 'servers data: ',servers
+#
+#     print 'servers_view type: %s' % (type(servers_view))
+#     print 'servers_view data: ' ,servers_view
+#
+#     return render(request,'ajax_page.html',locals())
+
+
+
 
 #根据服务器的的server_id，server和serverdetail多表联合查询，获取服务器的具体信息
 @valid_login
@@ -549,3 +578,64 @@ def execute_update_sql(sql):
     cur.execute(sql)
     conn.commit()
     conn.close()
+
+
+def name_list(request):
+    per_page_num = 10
+    '''
+    1       (0,10)
+    2       (10,20)
+    3       (20,30)
+    [(n-1)*10,n*10]
+    '''
+    all_ids_names = models.IdName.objects.all()
+    all_nums = len(all_ids_names)
+
+    if not request.GET.get('page'):
+        current_page = 1
+    elif request.GET.get('page'):
+        current_page = int(request.GET.get('page'))
+
+    if all_nums % per_page_num == 0:
+        all_pages = all_nums / per_page_num
+        last_num = per_page_num
+    elif all_nums % per_page_num > 0:
+        all_pages = all_nums // per_page_num + 1
+        last_num = all_nums % per_page_num
+
+    if current_page > all_pages:
+        current_page = 1
+        url = 'http://192.168.174.144:9000/clocmdb/name_list/?page=1'
+        return HttpResponseRedirect(url)
+
+    pre_page = current_page - 1
+    next_page = current_page + 1
+
+    if current_page <= 1:
+        pre_page = all_pages
+    elif current_page >= all_pages:
+        next_page = 1
+
+    start_num = (current_page - 1) * per_page_num
+    end_num = current_page * per_page_num
+
+    ids_names = models.IdName.objects.all()[start_num:end_num]
+
+    if start_num >= all_nums:
+        ids_names = models.IdName.objects.all()
+    elif end_num >= all_nums:
+        ids_names = models.IdName.objects.all()[all_nums-last_num:]
+    else:
+        ids_names = models.IdName.objects.all()[start_num:end_num]
+
+    return render(request,'name_list.html',locals())
+
+def name_list_go(request):
+    if request.method == 'POST' and request.POST:
+        topagenum = request.POST.get('topagenum')
+        if topagenum == '':
+            url = 'http://192.168.174.144:9000/clocmdb/name_list/'
+        elif topagenum:
+            url = 'http://192.168.174.144:9000/clocmdb/name_list/?page=' + str(topagenum)
+        print url
+        return HttpResponseRedirect(url)

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>NameList</title>
+    <style type="text/css">
+        thead {color:green}
+        tbody {color:blue;height:50px}
+        tfoot {color:red}
+    </style>
+</head>
+<body>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>NAME</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for id_name in ids_names %}
+                <tr>
+                    <td>{{ id_name.name_id }}</td>
+                    <td>{{ id_name.name }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <div align="center">
+        <button style="font-weight: bold;font-size: large">
+            <a href="/clocmdb/name_list/?page=1">首页</a>
+        </button>
+        <a href="/clocmdb/name_list/?page={{ pre_page }}">上一页</a>
+        第 {{ current_page }} 页/ 共 {{ all_pages }} 页
+        <a href="/clocmdb/name_list/?page={{ next_page }}">下一页</a>
+        <button style="font-weight: bold;font-size: large">
+            <a href="/clocmdb/name_list/?page={{ all_pages }}">尾页</a>
+        </button>
+    </div>
+    <div align="center">
+        <form action="/clocmdb/name_list_go/" method="post">
+            跳转到
+            <input id="topagenum" type="text" name="topagenum" placeholder="第几页">
+{#            <br>#}
+            <input id="submit" type="submit" value="Go">
+        </form>
+    </div>
+    <script>
+
+    </script>
+</body>
+</html>

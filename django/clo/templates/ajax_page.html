@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AJAX</title>
+</head>
+<body>
+    <div class="pagination">
+        <span class="step-links">
+            {% if servers_view.has_previous %}
+                <a id="pre" href="#">previous</a>
+            {% endif %}
+
+            <sapn class="current">
+                Page {{ servers_view.number }} of {{ servers_view.num_pages }}
+            </sapn>
+
+            {% if servers_view.has_next %}
+                <a id="next" href="#">next</a>
+            {% endif %}
+        </span>
+    </div>
+
+    {% block js %}
+        <script type="text/javascript">
+            $('.step-links #pre').click(function () {
+                {% if servers_view.has_next %}
+                    page = {{ servers_view.next_page_number }};
+                {% endif %}
+                $.ajax({
+                    type:"POST",
+                    url:"/clocmdb/",
+                })
+
+            })
+        </script>
+    {% endblock %}
+</body>
+</html>

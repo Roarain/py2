@@ -73,3 +73,7 @@ class SendCodes(models.Model):
     emailcode = models.CharField(max_length=20, verbose_name='邮箱验证码')
     isdelete = models.CharField(max_length=4, default='N', verbose_name='是否删除')
     current_time = models.DateTimeField(auto_now=True)
+
+class IdName(models.Model):
+    name_id = models.IntegerField(verbose_name='ID')
+    name = models.CharField(max_length=128,verbose_name='姓名')

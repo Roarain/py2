@@ -25,8 +25,8 @@ urlpatterns = [
     url(r'^captcha/',views.captcha),
     # url(r'^index/', views.index),
     url(r'^server_register/',views.server_register),
-    # url(r'^server_list/', views.server_list),
-    url(r'^server_list/(\d*)/', views.server_list),
+    url(r'^server_list/', views.server_list),
+    # url(r'^server_list/(\d*)/', views.server_list),
     url(r'^server_detail/(\d+)/', views.server_detail),
     url(r'^service_list/(\d+)/', views.service_list),
     url(r'^service_control/(\d+)/(\w+)/(\w+)/', views.service_control),
@@ -37,4 +37,8 @@ urlpatterns = [
     url(r'^server_monitor/(\d+)/',views.server_monitor),
     url(r'^monitor_zabbix/(\d+)/',views.monitor_zabbix),
     url(r'^zabbix_monitor/(\d+)/(\d+)/',views.zabbix_monitor),
+    # url(r'^ajax_page/(\d+)/',views.ajax_page),
+    url(r'^name_list/',views.name_list),
+    url(r'^name_list_go/',views.name_list_go),
+
 ]
